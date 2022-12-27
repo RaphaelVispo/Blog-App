@@ -1,0 +1,17 @@
+{
+    "users": {
+      "rapVispo": {
+        "hashedPassword": "$2b$10$B595W3RgKk8MBWL7blpU1.AvYPomUZby/Rgb6lBtSuoXD9MwQIwVS",
+        "firstName": "rap",
+        "lastName": "vis",
+        "createdDate": 1666275724577,
+        "updatedDate": 1666275724577
+      }
+    },
+    "blogs": {
+      
+    },
+    "comments": {
+      
+    }
+  }
