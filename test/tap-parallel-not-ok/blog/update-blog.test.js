@@ -43,7 +43,7 @@ describe('Update a Blog should work', async () => {
     });
 
     // must be a bad request
-    console.log(response);
+    // console.log(response);
     response.statusMessage.must.be.equal('Unauthorized');
   });
 
@@ -239,7 +239,7 @@ describe('Update a Blog should work', async () => {
     });
 
     // must be a bad request
-    console.log(response);
+    // console.log(response);
     response.statusMessage.must.be.equal('Forbidden');
   });
 });
