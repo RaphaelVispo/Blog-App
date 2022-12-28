@@ -1,5 +1,5 @@
 export const blog = {
-  // '/todo/:todoId': {
+  '/blog/:blogId': {
   //   get: {
   //     summary: 'Get a todo',
   //     operationId: 'getTodo',
@@ -26,43 +26,43 @@ export const blog = {
   //       }
   //     ]
   //   },
-  //   put: {
-  //     summary: 'Update a todo',
-  //     operationId: 'updateTodo',
-  //     parameters: [
-  //       {
-  //         $ref: '#/components/parameters/TodoParameterId'
-  //       }
-  //     ],
-  //     requestBody: {
-  //       description: 'THe request body for todo',
-  //       content: {
-  //         'application/json': {
-  //           schema: {
-  //             $ref: '#/components/schemas/TodoRequestObject'
-  //           }
-  //         }
-  //       },
-  //       required: true
-  //     },
-  //     responses: {
-  //       200: {
-  //         description: 'A todo object',
-  //         content: {
-  //           'application/json': {
-  //             schema: {
-  //               $ref: '#/components/schemas/TodoObject'
-  //             }
-  //           }
-  //         }
-  //       }
-  //     },
-  //     security: [
-  //       {
-  //         cookieAuth: []
-  //       }
-  //     ]
-  //   },
+    put: {
+      summary: 'Update a blog',
+      operationId: 'updateBlog',
+      parameters: [
+        {
+          $ref: '#/components/parameters/BlogParameterId'
+        }
+      ],
+      requestBody: {
+        description: 'The request body for todo',
+        content: {
+          'application/json': {
+            schema: {
+              $ref: '#/components/schemas/BlogRequestObject'
+            }
+          }
+        },
+        required: true
+      },
+      responses: {
+        200: {
+          description: 'A Blog object',
+          content: {
+            'application/json': {
+              schema: {
+                $ref: '#/components/schemas/BlogObject'
+              }
+            }
+          }
+        }
+      },
+      security: [
+        {
+          cookieAuth: []
+        }
+      ]
+    }
   //   delete: {
   //     summary: 'Delete a todo',
   //     operationId: 'deleteTodo',
@@ -94,7 +94,7 @@ export const blog = {
   //       }
   //     ]
   //   }
-  // },
+  },
   '/blog': {
     post: {
       summary: 'Create a blog',

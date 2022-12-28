@@ -1,9 +1,9 @@
 export const parameters = {
-  TodoParameterId: {
-    name: 'todoId',
+  BlogParameterId: {
+    name: 'blogId',
     in: 'path',
     required: true,
-    description: 'This is the id of the todo',
+    description: 'This is the id of the Blog',
     schema: {
       type: 'string'
     }

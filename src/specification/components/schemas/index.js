@@ -49,7 +49,7 @@ export const schemas = {
     ]
   },
 
-  TodoRequestObject: {
+  BlogRequestObject: {
     type: 'object',
     properties: {
       title: {
@@ -57,9 +57,6 @@ export const schemas = {
       },
       description: {
         type: 'string'
-      },
-      isDone: {
-        type: 'boolean'
       }
     }
 
