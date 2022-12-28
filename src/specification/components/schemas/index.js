@@ -49,6 +49,62 @@ export const schemas = {
     ]
   },
 
+  CommentRequestRequiredObject: {
+    type: 'object',
+    properties: {
+      message: {
+        type: 'string'
+      },
+      username: {
+        type: 'string'
+      },
+      createdDate: {
+        type: 'number'
+      },
+      updatedDate: {
+        type: 'number'
+
+      }
+
+    },
+    required: [
+      'message'
+    ]
+  },
+
+  CommentObject: {
+    type: 'object',
+    properties: {
+      message: {
+        type: 'string'
+      },
+      title: {
+        type: 'string'
+      },
+      description: {
+        type: 'string'
+      },
+      username: {
+        type: 'string'
+      },
+      comments: {
+        type: 'array',
+        items: {
+          type: 'string'
+        }
+      },
+
+      createdDate: {
+        type: 'number'
+      },
+      updatedDate: {
+        type: 'number'
+
+      }
+
+    }
+  },
+
   BlogRequestObject: {
     type: 'object',
     properties: {
