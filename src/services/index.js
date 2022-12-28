@@ -1,4 +1,5 @@
 import { createBlog } from './blog/create-blog.js';
+import { getBlog } from './blog/get-blog.js';
 import { updateBlog } from './blog/update-blog.js';
 import { general } from './general/index.js';
 import { login } from './users/login.js';
@@ -17,4 +18,5 @@ export class Service {
 
     createBlog=createBlog
     updateBlog=updateBlog
+    getBlog=getBlog
 }
