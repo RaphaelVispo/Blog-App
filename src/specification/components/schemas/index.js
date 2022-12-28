@@ -78,20 +78,8 @@ export const schemas = {
       message: {
         type: 'string'
       },
-      title: {
-        type: 'string'
-      },
-      description: {
-        type: 'string'
-      },
       username: {
         type: 'string'
-      },
-      comments: {
-        type: 'array',
-        items: {
-          type: 'string'
-        }
       },
 
       createdDate: {
@@ -103,6 +91,16 @@ export const schemas = {
       }
 
     }
+  },
+
+  CommentRequestObject: {
+    type: 'object',
+    properties: {
+      message: {
+        type: 'string'
+      }
+    }
+
   },
 
   BlogRequestObject: {
