@@ -3,6 +3,7 @@ import { deleteBlog } from './blog/delete-blog.js';
 import { getBlog } from './blog/get-blog.js';
 import { updateBlog } from './blog/update-blog.js';
 import { addComment } from './comments/add-comment.js';
+import { updateComment } from './comments/edit-comments.js';
 import { general } from './general/index.js';
 import { login } from './users/login.js';
 import { logout } from './users/logout.js';
@@ -24,4 +25,5 @@ export class Service {
     deleteBlog=deleteBlog
 
     addComment=addComment
+    updateComment=updateComment
 }
