@@ -2,6 +2,7 @@ import { createBlog } from './blog/create-blog.js';
 import { deleteBlog } from './blog/delete-blog.js';
 import { getBlog } from './blog/get-blog.js';
 import { updateBlog } from './blog/update-blog.js';
+import { addComment } from './comments/add-comment.js';
 import { general } from './general/index.js';
 import { login } from './users/login.js';
 import { logout } from './users/logout.js';
@@ -21,4 +22,6 @@ export class Service {
     updateBlog=updateBlog
     getBlog=getBlog
     deleteBlog=deleteBlog
+
+    addComment=addComment
 }
