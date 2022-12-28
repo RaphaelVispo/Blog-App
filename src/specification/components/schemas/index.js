@@ -1,5 +1,6 @@
+
 export const schemas = {
-  TodoObject: {
+  BlogObject: {
     type: 'object',
     properties: {
       id: {
@@ -12,9 +13,16 @@ export const schemas = {
       description: {
         type: 'string'
       },
-      isDone: {
-        type: 'boolean'
+      username: {
+        type: 'string'
       },
+      comments: {
+        type: 'array',
+        items: {
+          type: 'string'
+        }
+      },
+
       createdDate: {
         type: 'number'
       },
@@ -25,7 +33,7 @@ export const schemas = {
 
     }
   },
-  TodoRequestRequiredObject: {
+  BlogRequestRequiredObject: {
     type: 'object',
     properties: {
       title: {
@@ -33,9 +41,6 @@ export const schemas = {
       },
       description: {
         type: 'string'
-      },
-      isDone: {
-        type: 'boolean'
       }
     },
     required: [
