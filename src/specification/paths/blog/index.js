@@ -1,0 +1,166 @@
+export const blog = {
+  // '/todo/:todoId': {
+  //   get: {
+  //     summary: 'Get a todo',
+  //     operationId: 'getTodo',
+  //     parameters: [
+  //       {
+  //         $ref: '#/components/parameters/TodoParameterId'
+  //       }
+  //     ],
+  //     responses: {
+  //       200: {
+  //         description: 'A todo object',
+  //         content: {
+  //           'application/json': {
+  //             schema: {
+  //               $ref: '#/components/schemas/TodoObject'
+  //             }
+  //           }
+  //         }
+  //       }
+  //     },
+  //     security: [
+  //       {
+  //         cookieAuth: []
+  //       }
+  //     ]
+  //   },
+  //   put: {
+  //     summary: 'Update a todo',
+  //     operationId: 'updateTodo',
+  //     parameters: [
+  //       {
+  //         $ref: '#/components/parameters/TodoParameterId'
+  //       }
+  //     ],
+  //     requestBody: {
+  //       description: 'THe request body for todo',
+  //       content: {
+  //         'application/json': {
+  //           schema: {
+  //             $ref: '#/components/schemas/TodoRequestObject'
+  //           }
+  //         }
+  //       },
+  //       required: true
+  //     },
+  //     responses: {
+  //       200: {
+  //         description: 'A todo object',
+  //         content: {
+  //           'application/json': {
+  //             schema: {
+  //               $ref: '#/components/schemas/TodoObject'
+  //             }
+  //           }
+  //         }
+  //       }
+  //     },
+  //     security: [
+  //       {
+  //         cookieAuth: []
+  //       }
+  //     ]
+  //   },
+  //   delete: {
+  //     summary: 'Delete a todo',
+  //     operationId: 'deleteTodo',
+  //     parameters: [
+  //       {
+  //         $ref: '#/components/parameters/TodoParameterId'
+  //       }
+  //     ],
+  //     responses: {
+  //       200: {
+  //         description: 'successful response',
+  //         content: {
+  //           'application/json': {
+  //             schema: {
+  //               type: 'object',
+  //               properties: {
+  //                 success: {
+  //                   type: 'boolean'
+  //                 }
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     },
+  //     security: [
+  //       {
+  //         cookieAuth: []
+  //       }
+  //     ]
+  //   }
+  // },
+  '/blog': {
+    post: {
+      summary: 'Create a blog',
+      operationId: 'createBlog',
+      requestBody: {
+        description: 'THe request body for todo',
+        content: {
+          'application/json': {
+            schema: {
+              $ref: '#/components/schemas/BlogRequestRequiredObject'
+            }
+          }
+        },
+        required: true
+      },
+      responses: {
+        200: {
+          description: 'A todo object',
+          content: {
+            'application/json': {
+              schema: {
+                $ref: '#/components/schemas/BlogObject'
+              }
+            }
+          }
+        }
+      },
+      security: [
+        {
+          cookieAuth: []
+        }
+      ]
+    }
+    //   get: {
+    //     summary: 'Get many todo',
+    //     operationId: 'getManyTodo',
+    //     parameters: [
+    //       {
+    //         name: 'limit',
+    //         in: 'query',
+    //         description: 'The number of items returned',
+    //         schema: {
+    //           type: 'number'
+    //         }
+    //       }
+    //     ],
+    //     responses: {
+    //       200: {
+    //         description: 'A todo object',
+    //         content: {
+    //           'application/json': {
+    //             schema: {
+    //               type: 'array',
+    //               items: {
+    //                 $ref: '#/components/schemas/TodoObject'
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    //     },
+    //     security: [
+    //       {
+    //         cookieAuth: []
+    //       }
+    //     ]
+    //   }
+  }
+};
