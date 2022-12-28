@@ -62,38 +62,38 @@ export const blog = {
           cookieAuth: []
         }
       ]
+    },
+    delete: {
+      summary: 'Delete a todo',
+      operationId: 'deleteBlog',
+      parameters: [
+        {
+          $ref: '#/components/parameters/BlogParameterId'
+        }
+      ],
+      responses: {
+        200: {
+          description: 'successful response',
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                properties: {
+                  success: {
+                    type: 'boolean'
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      security: [
+        {
+          cookieAuth: []
+        }
+      ]
     }
-  //   delete: {
-  //     summary: 'Delete a todo',
-  //     operationId: 'deleteTodo',
-  //     parameters: [
-  //       {
-  //         $ref: '#/components/parameters/TodoParameterId'
-  //       }
-  //     ],
-  //     responses: {
-  //       200: {
-  //         description: 'successful response',
-  //         content: {
-  //           'application/json': {
-  //             schema: {
-  //               type: 'object',
-  //               properties: {
-  //                 success: {
-  //                   type: 'boolean'
-  //                 }
-  //               }
-  //             }
-  //           }
-  //         }
-  //       }
-  //     },
-  //     security: [
-  //       {
-  //         cookieAuth: []
-  //       }
-  //     ]
-  //   }
   },
   '/blog': {
     post: {
