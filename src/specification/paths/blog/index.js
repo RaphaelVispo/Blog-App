@@ -1,31 +1,31 @@
 export const blog = {
   '/blog/:blogId': {
-  //   get: {
-  //     summary: 'Get a todo',
-  //     operationId: 'getTodo',
-  //     parameters: [
-  //       {
-  //         $ref: '#/components/parameters/TodoParameterId'
-  //       }
-  //     ],
-  //     responses: {
-  //       200: {
-  //         description: 'A todo object',
-  //         content: {
-  //           'application/json': {
-  //             schema: {
-  //               $ref: '#/components/schemas/TodoObject'
-  //             }
-  //           }
-  //         }
-  //       }
-  //     },
-  //     security: [
-  //       {
-  //         cookieAuth: []
-  //       }
-  //     ]
-  //   },
+    get: {
+      summary: 'Get a blog',
+      operationId: 'getBlog',
+      parameters: [
+        {
+          $ref: '#/components/parameters/BlogParameterId'
+        }
+      ],
+      responses: {
+        200: {
+          description: 'A todo object',
+          content: {
+            'application/json': {
+              schema: {
+                $ref: '#/components/schemas/BlogObject'
+              }
+            }
+          }
+        }
+      },
+      security: [
+        {
+          cookieAuth: []
+        }
+      ]
+    },
     put: {
       summary: 'Update a blog',
       operationId: 'updateBlog',
