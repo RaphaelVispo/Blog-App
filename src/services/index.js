@@ -7,6 +7,7 @@ import { addComment } from './comments/add-comment.js';
 import { deleteComment } from './comments/delete-comments.js';
 import { updateComment } from './comments/edit-comments.js';
 import { general } from './general/index.js';
+import { getUserData } from './user-data/get-user-data.js';
 import { login } from './users/login.js';
 import { logout } from './users/logout.js';
 import { registerUser } from './users/register-user.js';
@@ -30,4 +31,6 @@ export class Service {
     addComment=addComment
     updateComment=updateComment
     deleteComment=deleteComment
+
+    getUserData=getUserData
 }
