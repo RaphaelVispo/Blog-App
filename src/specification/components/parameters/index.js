@@ -13,7 +13,7 @@ export const parameters = {
     name: 'commentId',
     in: 'path',
     required: true,
-    description: 'This is the id of the Blog',
+    description: 'This is the id of the Comment',
     schema: {
       type: 'string'
     }
