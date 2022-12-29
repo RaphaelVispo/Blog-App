@@ -25,7 +25,7 @@ export const comment = {
           content: {
             'application/json': {
               schema: {
-                $ref: '#/components/schemas/CommentRequestRequiredObject'
+                $ref: '#/components/schemas/CommentObject'
               }
             }
           }
