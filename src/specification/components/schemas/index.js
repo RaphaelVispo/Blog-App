@@ -21,30 +21,6 @@ export const schemas = {
         properties: {
 
         }
-        // type: 'array',
-        // items: {
-        //   type: 'object',
-        //   properties: {
-        //     id: {
-        //       type: 'string'
-
-        //     },
-        //     message: {
-        //       type: 'string'
-        //     },
-        //     username: {
-        //       type: 'string'
-        //     },
-
-        //     createdDate: {
-        //       type: 'number'
-        //     },
-        //     updatedDate: {
-        //       type: 'number'
-
-        //     }
-
-        //   }
 
       },
 
