@@ -79,6 +79,41 @@ export const comment = {
           cookieAuth: []
         }
       ]
+    },
+    delete: {
+      summary: 'Delete a comment',
+      operationId: 'deleteComment',
+      parameters: [
+        {
+          $ref: '#/components/parameters/BlogParameterId'
+        },
+        {
+
+          $ref: '#/components/parameters/CommentParameterId'
+        }
+      ],
+      responses: {
+        200: {
+          description: 'successful response',
+          content: {
+            'application/json': {
+              schema: {
+                type: 'object',
+                properties: {
+                  success: {
+                    type: 'boolean'
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      security: [
+        {
+          cookieAuth: []
+        }
+      ]
     }
   }
 
