@@ -222,7 +222,7 @@ describe('Update a Blog should work', async () => {
     cookie = response.headers['set-cookie'];
   });
 
-  it('it should return an error when the user is not yet logged in', async () => {
+  it('it should return an error when the user is trying to access blog that not his', async () => {
     const newTodo = {
       title: 'New Todo',
       description: 'Some description'
