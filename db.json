@@ -1,17 +1,207 @@
 {
-    "users": {
-      "rapVispo": {
-        "hashedPassword": "$2b$10$B595W3RgKk8MBWL7blpU1.AvYPomUZby/Rgb6lBtSuoXD9MwQIwVS",
-        "firstName": "rap",
-        "lastName": "vis",
-        "createdDate": 1666275724577,
-        "updatedDate": 1666275724577
-      }
+  "users": {
+    "rapVispo": {
+      "hashedPassword": "$2b$10$B595W3RgKk8MBWL7blpU1.AvYPomUZby/Rgb6lBtSuoXD9MwQIwVS",
+      "firstName": "rap",
+      "lastName": "vis",
+      "createdDate": 1666275724577,
+      "updatedDate": 1666275724577
     },
-    "blogs": {
-      
+    "user1": {
+      "hashedPassword": "$2b$10$zvnN.v/8WWMHLFE8gQR2yeOELmkPb2bvIdPtBecQHBpxNVDyK5C3y",
+      "firstName": "USER1",
+      "lastName": "USER1",
+      "createdDate": 1672144443527,
+      "updatedDate": 1672144443527
     },
-    "comments": {
-      
+    "ver@example.com": {
+      "hashedPassword": "$2b$10$PMEJmb3u0UCmfFsklnTK3u8/HNFLU6SdjdMQd/9ZlkddaJ6LYkKK6",
+      "firstName": "Lawrence",
+      "lastName": "Guarducci",
+      "createdDate": 1672298560957,
+      "updatedDate": 1672298560957
+    },
+    "de@example.com": {
+      "hashedPassword": "$2b$10$dIiCFljiGErW965xsVS/4.7eE7laiOf8m/T76iS/2q2YXItu2jsby",
+      "firstName": "Essie",
+      "lastName": "Mustafa",
+      "createdDate": 1672300832172,
+      "updatedDate": 1672300832172
+    },
+    "besecrep@example.com": {
+      "hashedPassword": "$2b$10$bRxU3jyvmBQFmwzlYZwD7.lzfWyq1fyZbORceRaBuGAHRvDircByS",
+      "firstName": "Ricky",
+      "lastName": "Lee",
+      "createdDate": 1672300834261,
+      "updatedDate": 1672300834261
+    },
+    "za@example.com": {
+      "hashedPassword": "$2b$10$uwy2nS.eNJZNMzEG2Mmz9OG42F67VmePgbX.kEKWcuhJTe/lXoqcS",
+      "firstName": "Scott",
+      "lastName": "Powers",
+      "createdDate": 1672300836397,
+      "updatedDate": 1672300836397
+    },
+    "haviuk@example.com": {
+      "hashedPassword": "$2b$10$y3lWzdB0g0XEU7DiPLjM1e8xCBlNC6HO.QXKUaO2adHsyXajBGiAS",
+      "firstName": "Inez",
+      "lastName": "Gatti",
+      "createdDate": 1672300838575,
+      "updatedDate": 1672300838575
+    },
+    "zeuzawuz@example.com": {
+      "hashedPassword": "$2b$10$/MIPefxZrW5lr2i6.8wtjO/y9TXwtaihfzGOEd0I8019IcSS3Nmrm",
+      "firstName": "Gene",
+      "lastName": "Bartolozzi",
+      "createdDate": 1672300840751,
+      "updatedDate": 1672300840751
+    },
+    "fobiw@example.com": {
+      "hashedPassword": "$2b$10$PRmeqw6d04BCeyo0g1WaT.IdBn04KAlUtRDiK/7fhAokuBXh06Sde",
+      "firstName": "Betty",
+      "lastName": "Noël",
+      "createdDate": 1672300842825,
+      "updatedDate": 1672300842825
+    },
+    "geb@example.com": {
+      "hashedPassword": "$2b$10$j2D0CB1BxjwZqNi92HH6BudPyE9lX6SzWfbsgHoltny9AVQsloxcm",
+      "firstName": "Rena",
+      "lastName": "van Dam",
+      "createdDate": 1672300875017,
+      "updatedDate": 1672300875017
+    },
+    "elena@example.com": {
+      "hashedPassword": "$2b$10$O1R4T9zTvlIH8nKm76u6Xe3kRwIMPdCYi9lIlgT43qMJN2knlx/T6",
+      "firstName": "Ryan",
+      "lastName": "Drost",
+      "createdDate": 1672300877340,
+      "updatedDate": 1672300877340
+    },
+    "ci@example.com": {
+      "hashedPassword": "$2b$10$xAkGdvz.UYIMTKFagdIWKuf5D0uBuUp7zbgE9K1h1Q8MSHQPXyhTS",
+      "firstName": "Evan",
+      "lastName": "Lyons",
+      "createdDate": 1672300879424,
+      "updatedDate": 1672300879424
+    }
+  },
+  "blogs": {
+    "2c326fe4-6e10-491e-aca6-384ac4956e65": {
+      "title": "string",
+      "description": "string",
+      "username": "user1",
+      "comments": {
+        "485abacb-3f85-494c-b729-b3e5b614aa9f": {
+          "message": "string2222",
+          "username": "user1",
+          "createdDate": 1672233267870,
+          "updatedDate": 1672234145421
+        }
+      },
+      "createdDate": 1672199466717,
+      "updatedDate": 1672199466717
+    },
+    "20239f7e-e6b9-4848-9c5f-653d26b797d8": {
+      "title": "New Todo",
+      "description": "Some description",
+      "username": "mizsotsac@example.com",
+      "comments": {
+        "77bc71af-4a6e-4428-84df-49469232748e": {
+          "message": "string222rrrrrr2",
+          "username": "user1",
+          "createdDate": 1672231501243,
+          "updatedDate": 1672234355248
+        },
+        "bb843d27-a430-4ae2-b22b-1b3afff874da": {
+          "message": "comments again",
+          "username": "user1",
+          "createdDate": 1672231586495,
+          "updatedDate": 1672231586495
+        }
+      },
+      "createdDate": 1672208075963,
+      "updatedDate": 1672208075963
+    },
+    "11e89109-9868-41e8-a9c0-ff503a02e7a8": {
+      "title": "New Todo",
+      "description": "Some description",
+      "username": "soz@example.com",
+      "comments": {
+        "5790821e-8592-470c-955e-8cc1e54bee98": {
+          "message": "New comments",
+          "username": "zon@example.com",
+          "createdDate": 1672234188592,
+          "updatedDate": 1672234188592
+        },
+        "c6388aa9-61e4-4f41-8be7-49ec00036502": {
+          "message": "New comments",
+          "username": "gi@example.com",
+          "createdDate": 1672299841239,
+          "updatedDate": 1672299841239
+        },
+        "4eceac64-8d95-42f1-af16-fa0614086abb": {
+          "message": "New comments",
+          "username": "zeuzawuz@example.com",
+          "createdDate": 1672300840827,
+          "updatedDate": 1672300840827
+        },
+        "06b76eef-f7b6-43a1-8342-9e5c45e8ca99": {
+          "message": "Edited comment",
+          "username": "fobiw@example.com",
+          "createdDate": 1672300842899,
+          "updatedDate": 1672300842902
+        }
+      },
+      "createdDate": 1672210680122,
+      "updatedDate": 1672210680122
+    },
+    "b2212c9e-a25d-4972-abf8-8d6a80236fdb": {
+      "title": "New Todo",
+      "description": "Some description",
+      "username": "bazgi@example.com",
+      "comments": {},
+      "createdDate": 1672295582341,
+      "updatedDate": 1672295582341
+    },
+    "a4440bc0-4b19-4ca8-9f5f-45e26170272e": {
+      "title": "New Todo",
+      "description": "Some description",
+      "username": "de@example.com",
+      "comments": {},
+      "createdDate": 1672300832248,
+      "updatedDate": 1672300832248
+    },
+    "d6e09584-979c-417f-8b8d-57fb4a0bc536": {
+      "title": "New Todo for get",
+      "description": "Some description",
+      "username": "besecrep@example.com",
+      "comments": {},
+      "createdDate": 1672300834343,
+      "updatedDate": 1672300834343
+    },
+    "ebeb165d-203a-49cf-b31a-1f96dcd6e8bc": {
+      "title": "New Todo for get",
+      "description": "Some description",
+      "username": "za@example.com",
+      "comments": {},
+      "createdDate": 1672300836473,
+      "updatedDate": 1672300836473
+    },
+    "b08e0cc6-709d-4293-8fbf-d97d654d5e1a": {
+      "title": "New Todo for update",
+      "description": "Some description 2",
+      "username": "haviuk@example.com",
+      "comments": {},
+      "createdDate": 1672300838648,
+      "updatedDate": 1672300838650
+    },
+    "08c2998a-0565-4115-b26f-8e30754e3ed3": {
+      "title": "New Todo for update 2",
+      "description": "Some description",
+      "username": "haviuk@example.com",
+      "comments": {},
+      "createdDate": 1672300838653,
+      "updatedDate": 1672300838654
     }
   }
+}

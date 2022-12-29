@@ -42,7 +42,7 @@ describe('Update a Blog should work', async () => {
     });
 
     // must be a bad request
-    // console.log(response);
+    // console.log(await response.json());
     response.statusCode.must.be.equal(401);
   });
 
@@ -88,6 +88,7 @@ describe('Update a Blog should work', async () => {
     response.statusCode.must.be.equal(200);
 
     cookie = response.headers['set-cookie'];
+    // console.log(cookie);
   });
 
   it('Should update the object given an ID', async () => {
@@ -101,20 +102,21 @@ describe('Update a Blog should work', async () => {
 
     const createResponse = await app.inject({
       method: 'POST',
-      url: `${prefix}/blog/2bf4349a-147d-447f-b5c9-d8329a1f8d1a/comment`,
+      url: `${prefix}/blog/11e89109-9868-41e8-a9c0-ff503a02e7a8/comment`,
       headers: {
         'Content-Type': 'application/json',
         cookie
       },
       body: JSON.stringify(newComment)
     });
-    console.log(await createResponse.json());
+    // console.log(await createResponse.json().id);
 
-    const { blogId, createdDate, updatedDate } = await createResponse.json();
+    const { id, createdDate, updatedDate } = await createResponse.json();
+    // console.log(`\n\n${blogId}\n\n`);
 
     const response = await app.inject({
       method: 'PUT',
-      url: `${prefix}/blog/2bf4349a-147d-447f-b5c9-d8329a1f8d1a/comment/${blogId}`,
+      url: `${prefix}/blog/11e89109-9868-41e8-a9c0-ff503a02e7a8/comment/${id}`,
       headers: {
         'Content-Type': 'application/json',
         cookie
@@ -185,5 +187,9 @@ describe('Update a Blog should work', async () => {
     // must be a bad request
     // console.log(response);
     response.statusMessage.must.be.equal('Forbidden');
+  });
+
+  after(async () => {
+    await app.close();
   });
 });

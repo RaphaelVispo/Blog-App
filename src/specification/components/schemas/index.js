@@ -17,9 +17,8 @@ export const schemas = {
         type: 'string'
       },
       comments: {
-        type: 'array',
-        items: {
-          type: 'string'
+        type: 'object',
+        properties: {
         }
       },
 
@@ -75,6 +74,10 @@ export const schemas = {
   CommentObject: {
     type: 'object',
     properties: {
+      id: {
+        type: 'string'
+
+      },
       message: {
         type: 'string'
       },
