@@ -83,6 +83,48 @@
       "lastName": "Lyons",
       "createdDate": 1672300879424,
       "updatedDate": 1672300879424
+    },
+    "joweote@example.com": {
+      "hashedPassword": "$2b$10$9UT/VxAmWJ0Yz/HmhdTAj.iyyaXsWNNO8sOe9qGBk03CsOcAKkKyu",
+      "firstName": "Bryan",
+      "lastName": "Hussain",
+      "createdDate": 1672306054080,
+      "updatedDate": 1672306054080
+    },
+    "walipoval@example.com": {
+      "hashedPassword": "$2b$10$KIVuB3rpgAmB3jKi27wvj.bmciT0MNpqUBNR5fs4WGPQICs.XcBIq",
+      "firstName": "Jeanette",
+      "lastName": "Mills",
+      "createdDate": 1672306056303,
+      "updatedDate": 1672306056303
+    },
+    "conlobwek@example.com": {
+      "hashedPassword": "$2b$10$lFmu1cNxjS/9YVD5la97LOyzhVICAX3GldEqitb3EH6NtcjIInhkS",
+      "firstName": "Sarah",
+      "lastName": "Cencetti",
+      "createdDate": 1672306058516,
+      "updatedDate": 1672306058516
+    },
+    "hewehahen@example.com": {
+      "hashedPassword": "$2b$10$.TwAMWNl7Sp0ReZ6lnqMLO7cIiWwIpdoBcS2oitW12aVvqS80gHWa",
+      "firstName": "Luke",
+      "lastName": "Étienne",
+      "createdDate": 1672306092035,
+      "updatedDate": 1672306092035
+    },
+    "opavesto@example.com": {
+      "hashedPassword": "$2b$10$MVP65tbncOLEffMzrthQGee23HB/RKoDbMkPdkNglWjVsOxCWdVhS",
+      "firstName": "Violet",
+      "lastName": "Nannelli",
+      "createdDate": 1672306094535,
+      "updatedDate": 1672306094535
+    },
+    "jir@example.com": {
+      "hashedPassword": "$2b$10$/avRc5IHK74Fo/nFOatcUOiCAO/WzjAWAYUsfaCBLepRlOk/ZpRy.",
+      "firstName": "Melvin",
+      "lastName": "Gibbons",
+      "createdDate": 1672306096899,
+      "updatedDate": 1672306096899
     }
   },
   "blogs": {
@@ -111,12 +153,6 @@
           "username": "user1",
           "createdDate": 1672231501243,
           "updatedDate": 1672234355248
-        },
-        "bb843d27-a430-4ae2-b22b-1b3afff874da": {
-          "message": "comments again",
-          "username": "user1",
-          "createdDate": 1672231586495,
-          "updatedDate": 1672231586495
         }
       },
       "createdDate": 1672208075963,
@@ -150,6 +186,30 @@
           "username": "fobiw@example.com",
           "createdDate": 1672300842899,
           "updatedDate": 1672300842902
+        },
+        "9d23b105-0e39-45a5-8bcc-f961190a3af9": {
+          "message": "New comments",
+          "username": "joweote@example.com",
+          "createdDate": 1672306054158,
+          "updatedDate": 1672306054158
+        },
+        "d23832b9-3a99-4278-89df-97eefd77f965": {
+          "message": "Edited comment",
+          "username": "conlobwek@example.com",
+          "createdDate": 1672306058599,
+          "updatedDate": 1672306058602
+        },
+        "5a30503a-e6af-4e81-b7bd-aa56bc83717f": {
+          "message": "New comments",
+          "username": "hewehahen@example.com",
+          "createdDate": 1672306092177,
+          "updatedDate": 1672306092177
+        },
+        "da1495f2-3fc1-4822-af1a-7c7ad59bbae1": {
+          "message": "Edited comment",
+          "username": "jir@example.com",
+          "createdDate": 1672306096979,
+          "updatedDate": 1672306096981
         }
       },
       "createdDate": 1672210680122,
