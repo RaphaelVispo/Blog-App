@@ -18,8 +18,6 @@ describe('Get a blog should work', async () => {
     });
   });
 
-  let wrongId;
-
   const newUser = {
     username: chance.email({ domain: 'example.com' }),
     password: chance.string({ length: 12 }),
@@ -112,7 +110,6 @@ describe('Get a blog should work', async () => {
     });
 
     const { id } = await createResponse.json();
-    wrongId = id;
 
     const response = await app.inject({
       method: 'GET',
@@ -170,20 +167,6 @@ describe('Get a blog should work', async () => {
     response.statusCode.must.be.equal(200);
 
     cookie = response.headers['set-cookie'];
-  });
-
-  it('Should error 404 forbidden ', async () => {
-    const response = await app.inject({
-      method: 'GET',
-      headers: {
-        cookie
-      },
-      url: `${prefix}/blog/${wrongId}`
-    });
-
-    // this checks if HTTP status code is equal to 200
-    response.statusCode.must.be.equal(403);
-    response.statusMessage.must.be.equal('Forbidden');
   });
 
   it('Should return error 404 not found', async () => {
