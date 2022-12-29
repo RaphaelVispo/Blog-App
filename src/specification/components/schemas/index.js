@@ -19,7 +19,33 @@ export const schemas = {
       comments: {
         type: 'object',
         properties: {
+
         }
+        // type: 'array',
+        // items: {
+        //   type: 'object',
+        //   properties: {
+        //     id: {
+        //       type: 'string'
+
+        //     },
+        //     message: {
+        //       type: 'string'
+        //     },
+        //     username: {
+        //       type: 'string'
+        //     },
+
+        //     createdDate: {
+        //       type: 'number'
+        //     },
+        //     updatedDate: {
+        //       type: 'number'
+
+        //     }
+
+        //   }
+
       },
 
       createdDate: {
@@ -32,6 +58,63 @@ export const schemas = {
 
     }
   },
+
+  GetBlogObject: {
+    type: 'object',
+    properties: {
+      id: {
+        type: 'string'
+
+      },
+      title: {
+        type: 'string'
+      },
+      description: {
+        type: 'string'
+      },
+      username: {
+        type: 'string'
+      },
+      comments: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: {
+            id: {
+              type: 'string'
+
+            },
+            message: {
+              type: 'string'
+            },
+            username: {
+              type: 'string'
+            },
+
+            createdDate: {
+              type: 'number'
+            },
+            updatedDate: {
+              type: 'number'
+
+            }
+
+          }
+        }
+
+      },
+
+      createdDate: {
+        type: 'number'
+      },
+      updatedDate: {
+        type: 'number'
+
+      }
+
+    }
+  },
+
   BlogRequestRequiredObject: {
     type: 'object',
     properties: {

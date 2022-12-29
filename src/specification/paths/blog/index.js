@@ -14,7 +14,7 @@ export const blog = {
           content: {
             'application/json': {
               schema: {
-                $ref: '#/components/schemas/BlogObject'
+                $ref: '#/components/schemas/GetBlogObject'
               }
             }
           }
@@ -127,40 +127,40 @@ export const blog = {
           cookieAuth: []
         }
       ]
+    },
+    get: {
+      summary: 'Get many blogs',
+      operationId: 'getManyBlogs',
+      parameters: [
+        {
+          name: 'limit',
+          in: 'query',
+          description: 'The number of items returned',
+          schema: {
+            type: 'number'
+          }
+        }
+      ],
+      responses: {
+        200: {
+          description: 'A blog object',
+          content: {
+            'application/json': {
+              schema: {
+                type: 'array',
+                items: {
+                  $ref: '#/components/schemas/GetBlogObject'
+                }
+              }
+            }
+          }
+        }
+      },
+      security: [
+        {
+          cookieAuth: []
+        }
+      ]
     }
-    //   get: {
-    //     summary: 'Get many todo',
-    //     operationId: 'getManyTodo',
-    //     parameters: [
-    //       {
-    //         name: 'limit',
-    //         in: 'query',
-    //         description: 'The number of items returned',
-    //         schema: {
-    //           type: 'number'
-    //         }
-    //       }
-    //     ],
-    //     responses: {
-    //       200: {
-    //         description: 'A todo object',
-    //         content: {
-    //           'application/json': {
-    //             schema: {
-    //               type: 'array',
-    //               items: {
-    //                 $ref: '#/components/schemas/TodoObject'
-    //               }
-    //             }
-    //           }
-    //         }
-    //       }
-    //     },
-    //     security: [
-    //       {
-    //         cookieAuth: []
-    //       }
-    //     ]
-    //   }
   }
 };

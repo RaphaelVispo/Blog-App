@@ -17,12 +17,20 @@ export const getBlog = async (request, reply) => {
     return reply.notFound();
   }
 
-  if (blogs[id].username !== username) {
-    return reply.forbidden('You are not the owner of the todo');
-  }
+  const pickedBlog = blogs[id];
+  const comm = Object
+    .entries(pickedBlog.comments)
+    .map(function ([id, comment]) {
+      return {
+        id,
+        ...comment
+      };
+    });
+
+  pickedBlog.comments = comm;
 
   return {
     id,
-    ...blogs[id]
+    ...pickedBlog
   };
 };

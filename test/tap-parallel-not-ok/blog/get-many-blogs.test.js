@@ -9,8 +9,14 @@ tap.mochaGlobals();
 
 const prefix = '/api';
 
-describe('Creating a blog should work', async () => {
+describe('Get many todo should work', async () => {
   let app;
+
+  before(async () => {
+    app = await build({
+      forceCloseConnections: true
+    });
+  });
 
   const newUser = {
     username: chance.email({ domain: 'example.com' }),
@@ -20,32 +26,6 @@ describe('Creating a blog should work', async () => {
   };
 
   let cookie = '';
-
-  before(async () => {
-    app = await build({
-      forceCloseConnections: true
-    });
-  });
-
-  it('it should return an error when the user is not yet logged in', async () => {
-    const newTodo = {
-      title: 'New Todo',
-      description: 'Some description'
-    };
-
-    const response = await app.inject({
-      method: 'POST',
-      url: `${prefix}/blog`,
-      headers: {
-        'Content-Type': 'application/json',
-        cookie
-      },
-      body: JSON.stringify(newTodo)
-    });
-
-    // this checks if HTTP status code is equal to 200
-    response.statusCode.must.be.equal(401);
-  });
 
   it('Should return the user that was created a new user', async () => {
     const response = await app.inject({
@@ -91,23 +71,14 @@ describe('Creating a blog should work', async () => {
     cookie = response.headers['set-cookie'];
   });
 
-  it('Should return the object that was created with ID ', async () => {
-    const newTodo = {
-      title: 'New Todo',
-      description: 'Some description'
-    };
-
+  it('Should return a list of objects with default limit', async () => {
     const response = await app.inject({
-      method: 'POST',
-      url: `${prefix}/blog`,
+      method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
         cookie
       },
-      body: JSON.stringify(newTodo)
+      url: `${prefix}/blog`
     });
-
-    console.log(await response.json());
 
     // this checks if HTTP status code is equal to 200
     response.statusCode.must.be.equal(200);
@@ -115,15 +86,28 @@ describe('Creating a blog should work', async () => {
     const result = await response.json();
 
     // expect that id exists
-    result.id.must.not.be.null();
-    // expect that all of the values should be equal to newTodo properties
-    result.title.must.be.equal(newTodo.title);
-    result.description.must.be.equal(newTodo.description);
-    // expect taht username is false because it was not given
-    result.username.must.not.be.null();
-    // result.comments.must.be.an.instanceOf(Object);
-    // expect createdDate and updatedDate is not null
-    result.createdDate.must.not.be.null();
-    result.updatedDate.must.not.be.null();
+    result.length.must.not.be.above(5);
+  });
+
+  it('Should return a list of objects with default limit', async () => {
+    const response = await app.inject({
+      method: 'GET',
+      headers: {
+        cookie
+      },
+      url: `${prefix}/blog?limit=2`
+    });
+
+    // this checks if HTTP status code is equal to 200
+    response.statusCode.must.be.equal(200);
+
+    const result = await response.json();
+
+    // expect that id exists
+    result.length.must.not.be.above(2);
+  });
+
+  after(async () => {
+    await app.close();
   });
 });
