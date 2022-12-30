@@ -7,6 +7,7 @@ import { addComment } from './comments/add-comment.js';
 import { deleteComment } from './comments/delete-comments.js';
 import { updateComment } from './comments/edit-comments.js';
 import { general } from './general/index.js';
+import { changePassword } from './user-data/change-password.js';
 import { updateUserData } from './user-data/edit-user-data.js';
 import { getUserData } from './user-data/get-user-data.js';
 import { login } from './users/login.js';
@@ -35,4 +36,5 @@ export class Service {
 
     getUserData=getUserData
     updateUserData=updateUserData
+    changePassword=changePassword
 }
