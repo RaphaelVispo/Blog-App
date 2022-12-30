@@ -28,19 +28,14 @@ describe('Get a blog should work', async () => {
   let cookie = '';
 
   it('it should return an error when the user is not yet logged in', async () => {
-    const newTodo = {
-      title: 'New Todo',
-      description: 'Some description'
-    };
-
     const response = await app.inject({
       method: 'GET',
       url: `${prefix}/user/rapVispo`,
       headers: {
         'Content-Type': 'application/json',
         cookie
-      },
-      body: JSON.stringify(newTodo)
+      }
+
     });
 
     // must be a bad request
@@ -94,18 +89,12 @@ describe('Get a blog should work', async () => {
 
   // Start test here
   it('Should return the object given an ID', async () => {
-    const newTodo = {
-      title: 'New Todo for get',
-      description: 'Some description'
-    };
-
     const createResponse = await app.inject({
       method: 'GET',
       url: `${prefix}/user/${newUser.username}`,
       headers: {
         cookie
-      },
-      body: JSON.stringify(newTodo)
+      }
     });
 
     // this checks if HTTP status code is equal to 200
