@@ -13,6 +13,8 @@ import jwt from '@fastify/jwt';
 
 import { Security } from './security/index.js';
 
+import stat from '@fastify/static';
+
 const prefix = '/api';
 
 export async function build () {
@@ -50,25 +52,22 @@ export async function build () {
     exposeRoute: true
   };
 
+  // makes every 404 to point to our Web app frontend
+  fastify.setNotFoundHandler(function (_request, reply) {
+    // bad practice but force 404 to 200
+    reply.statusCode = 200;
+    // send the public/index.html
+    reply.sendFile('index.html');
+  });
+
+  fastify.register(stat, {
+    root: `${process.cwd()}/src/public`,
+    preCompressed: true
+  });
+
   fastify.register(swagger, swaggerOptions);
   fastify.register(openAPIGlue, openAPIGlueOptions);
 
-  // fastify.get(prefix, general);
-
-  // // creating todo
-  // fastify.post(`${prefix}/todo`, createTodo);
-
-  // // get many to do
-  // fastify.get(`${prefix}/todo`, getManyTodos);
-
-  // // get one todo using a param
-  // fastify.get(`${prefix}/todo/:todoId`, gettodos);
-
-  // // update a todo using ta param
-  // fastify.put(`${prefix}/todo/:todoId`, updateTodo);
-
-  // // delete todo
-  // fastify.delete(`${prefix}/todo/:todoId`, deletetodos);
 
   return fastify;
 }
