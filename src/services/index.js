@@ -10,6 +10,7 @@ import { general } from './general/index.js';
 import { changePassword } from './user-data/change-password.js';
 import { updateUserData } from './user-data/edit-user-data.js';
 import { getUserData } from './user-data/get-user-data.js';
+import { authCheck } from './users/auth-check.js';
 import { login } from './users/login.js';
 import { logout } from './users/logout.js';
 import { registerUser } from './users/register-user.js';
@@ -23,6 +24,7 @@ export class Service {
     registerUser=registerUser
     login=login
     logout=logout
+    authCheck=authCheck
 
     createBlog=createBlog
     updateBlog=updateBlog
