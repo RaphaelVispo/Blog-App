@@ -145,7 +145,7 @@ describe('Get a blog should work', async () => {
       },
       body: JSON.stringify({
         username: 'user1',
-        password: '1111111111'
+        password: 'password123'
       })
     });
 
@@ -170,7 +170,7 @@ describe('Get a blog should work', async () => {
       },
       body: JSON.stringify(changeUserData)
     });
-    console.log(createResponse);
+    // console.log(createResponse);
 
     // this checks if HTTP status code is equal to 200
     createResponse.statusCode.must.be.equal(403);

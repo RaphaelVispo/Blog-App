@@ -159,7 +159,7 @@ describe('Get a blog should work', async () => {
       },
       body: JSON.stringify({
         username: 'user1',
-        password: '1111111111'
+        password: 'password123'
       })
     });
 
