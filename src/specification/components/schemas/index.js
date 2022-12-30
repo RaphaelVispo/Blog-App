@@ -196,6 +196,18 @@ export const schemas = {
     }
   },
 
+  UserEditRequestObject: {
+    type: 'object',
+    properties: {
+      firstName: {
+        type: 'string'
+      },
+      lastName: {
+        type: 'string'
+      }
+    }
+  },
+
   UserObject: {
     type: 'object',
     properties: {
