@@ -42,6 +42,16 @@ export const routes = {
       () => import('./pages/page-register/index.js')
     ]
   },
+  '/change-password': {
+    render: () => html`
+      <page-change-password></page-change-password>
+    `,
+    // runs all scripts, if any one of the functions in the list fails
+    preRender: [
+      redirectIfLoggedIn,
+      () => import('./pages/page-change-password/index.js')
+    ]
+  },
 //   '/todos': {
 //     render: () => html`
 //       <page-todos></page-todos>
