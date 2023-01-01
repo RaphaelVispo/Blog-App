@@ -8,6 +8,9 @@ export function template () {
     <nav>
     ${this.loggedIn
       ? html`
+      <a href="/user">
+          Look at users
+        </a>
         <a href="/change-user-data">
           Change User Data
         </a>

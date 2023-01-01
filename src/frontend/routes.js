@@ -62,6 +62,16 @@ export const routes = {
       () => import('./pages/page-change-user-data/index.js')
     ]
   },
+  '/user': {
+    render: () => html`
+      <page-users></page-users>
+    `,
+    // runs all scripts, if any one of the functions in the list fails
+    preRender: [
+      redirectIfLoggedOut,
+      () => import('./pages/page-user/index.js')
+    ]
+  },
 //   '/todos': {
 //     render: () => html`
 //       <page-todos></page-todos>
