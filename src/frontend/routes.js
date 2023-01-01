@@ -32,6 +32,46 @@ export const routes = {
       () => import('./pages/page-login/index.js')
     ]
   },
+  '/register': {
+    render: () => html`
+      <page-register></page-register>
+    `,
+    // runs all scripts, if any one of the functions in the list fails
+    preRender: [
+      redirectIfLoggedIn,
+      () => import('./pages/page-register/index.js')
+    ]
+  },
+  '/change-password': {
+    render: () => html`
+      <page-change-password></page-change-password>
+    `,
+    // runs all scripts, if any one of the functions in the list fails
+    preRender: [
+      redirectIfLoggedIn,
+      () => import('./pages/page-change-password/index.js')
+    ]
+  },
+  '/change-user-data': {
+    render: () => html`
+      <page-change-user-data></page-change-user-data>
+    `,
+    // runs all scripts, if any one of the functions in the list fails
+    preRender: [
+      redirectIfLoggedIn,
+      () => import('./pages/page-change-user-data/index.js')
+    ]
+  },
+  '/user': {
+    render: () => html`
+      <page-users></page-users>
+    `,
+    // runs all scripts, if any one of the functions in the list fails
+    preRender: [
+      redirectIfLoggedOut,
+      () => import('./pages/page-user/index.js')
+    ]
+  },
 //   '/todos': {
 //     render: () => html`
 //       <page-todos></page-todos>
