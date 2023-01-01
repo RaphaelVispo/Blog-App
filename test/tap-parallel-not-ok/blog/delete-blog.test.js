@@ -133,7 +133,7 @@ describe('Delete a todo should work', async () => {
       headers: {
         cookie
       },
-      url: `${prefix}/todo/${id}`
+      url: `${prefix}/blog/${id}`
     });
 
     getResponse.statusCode.must.be.equal(404);
