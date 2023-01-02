@@ -53,7 +53,7 @@ export function template () {
         <button @click="${this.editComment}"> Edit </button> 
         <button @click=> Delete </button> 
 
-        ${this.isEditingComment ?  html`
+        ${this.isEditingComment && (this.isEditingCommentId === comment.id) ?  html`
         <comment-component @submit-comment="${this.updateComment}" .comment="${comment}"></comment-component>
        `
          :''}

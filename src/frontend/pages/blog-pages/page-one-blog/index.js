@@ -15,13 +15,14 @@ class Page extends LitPage {
   @property({ type: Array })
   comments = []
 
-
-
   @property({ type: Boolean })
   isEditing= false;
 
   @property({ type: Boolean })
   isEditingComment= false;
+
+  @property({ type: String })
+  isEditingCommentId= "";
 
   @property({ type: String })
   errorMessage = ''
@@ -43,7 +44,10 @@ class Page extends LitPage {
   }
 
   async editComment(event){
+    event.preventDefault();
     this.isEditingComment= true;
+    console.log(event);
+    this.isEditingCommentId= event.detail.id;
   }
   async getBlog (id) {
     const response = await window.fetch(`/api/blog/${id}`);
@@ -125,8 +129,13 @@ class Page extends LitPage {
       if (response.status !== 200) {
         return this.setErrorMessage(await response.json(), response.status);
       } else {
-        this.blog = await response.json();
-        changeUrl('/blog')
+        const comm = await response.json();
+        // console.log(comm)
+        // console.log(this.comments)
+        this.comments = this.comments.map(obj => comm.id === obj.id ? comm : obj) ;
+        // console.log(this.comments)
+        this.isEditingComment = false;
+        
       }
     } catch (error) {
       return this.setErrorMessage(error, 404);
@@ -150,8 +159,8 @@ class Page extends LitPage {
       const data = await response.json();
       // appends the new object
       this.comments = [
-        data,
-        ...this.comments
+        ...this.comments,
+        data
       ];
       console.log(this.comments)
     } catch (error) {
