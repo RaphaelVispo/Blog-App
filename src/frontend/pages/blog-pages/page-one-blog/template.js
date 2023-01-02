@@ -33,7 +33,7 @@ export function template () {
       <div> <h5>Last updated on ${new Date( this.blog.updatedDate).toDateString()}</h5></div>
 
       <button @click="${this.editBlog}"> Edit </button> 
-      <button> Delete </button> 
+      <button @click= "${this.deleteBlog}"> Delete </button> 
       ${this.isEditing ?  html`
          <blog-component @submit-blog="${this.updateBlog}" .blog="${this.blog}"></blog-component>
         `

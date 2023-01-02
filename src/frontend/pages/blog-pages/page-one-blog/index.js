@@ -71,6 +71,29 @@ class Page extends LitPage {
       return this.setErrorMessage(error, 404);
     }
   }
+
+  async deleteBlog (event) {
+    event.preventDefault();
+    // we get the data from the detail being sent by the todo-component
+    const { detail } = event;
+    const response = await window.fetch(`/api/blog/${this.blog.id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(detail)
+    });
+    try {
+      if (response.status !== 200) {
+        return this.setErrorMessage(await response.json(), response.status);
+      } else {
+        this.blog = await response.json();
+        changeUrl('/blog')
+      }
+    } catch (error) {
+      return this.setErrorMessage(error, 404);
+    }
+  }
   async setErrorMessage (data, status) {
     const { message, error } = data;
     this.errorMessage = `HTTP Code: ${status} - ${error} - ${message}`;
