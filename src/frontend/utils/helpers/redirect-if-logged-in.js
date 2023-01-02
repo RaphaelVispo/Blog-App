@@ -9,7 +9,8 @@ export async function redirectIfLoggedIn () {
     (await window.fetch('/api/auth-check')).status === 200) {
     // go to todos;
     await state.set('user-is-logged-in', true);
-    return changeUrl('/');
+    return changeUrl('/blog');
+
   }
 
   await state.set('user-is-logged-in', false);

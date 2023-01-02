@@ -72,6 +72,17 @@ export const routes = {
       () => import('./pages/user-pages/page-user/index.js')
     ]
   },
+
+  '/blog': {
+    render: () => html`
+      <page-blogs></page-blogs>
+    `,
+    // runs all scripts, if any one of the functions in the list fails
+    preRender: [
+      redirectIfLoggedOut,
+      () => import('./pages/blog-pages/page-list/index.js')
+    ]
+  },
 //   '/todos': {
 //     render: () => html`
 //       <page-todos></page-todos>

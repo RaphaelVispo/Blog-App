@@ -35,8 +35,8 @@ class Component extends LitNoShadow {
     });
     if (response.status === 200) {
       this.errorMessage = '';
-      return changeUrl('/')
-    //   return changeUrl('/todos');
+      return changeUrl('/blog');
+
     }
     const { message, error } = await response.json();
     this.errorMessage = `HTTP Code: ${response.status} - ${error} - ${message}`;
