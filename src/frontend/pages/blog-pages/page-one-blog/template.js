@@ -1,6 +1,8 @@
 import { html } from 'lit';
 import '../../../components/blog-components/blog-component/index.js';
 import '../../../components/comment-components/comment-component/index.js';
+import '../../../components/comment-components/button-component/index.js';
+
 
 
 export function template () {
@@ -14,6 +16,9 @@ export function template () {
       .todo * {
         flex: 1;
       }
+
+  
+  
     </style>
     
     ${this.errorMessage
@@ -27,8 +32,8 @@ export function template () {
       : ''}
 
       ${Object.keys(this.blog).length ? html`
-      <h2>${this.blog.title}</h2>
-      <h3>${this.blog.description}</h3>
+      <h2>Title: ${this.blog.title}</h2>
+      <h3>Description: ${this.blog.description}</h3>
       
       <div> <h5> Created on ${new Date(this.blog.createdDate).toDateString()}| </h5></div>
       <div> <h5>Last updated on ${new Date( this.blog.updatedDate).toDateString()}</h5></div>
@@ -42,16 +47,17 @@ export function template () {
 
       }
       
-    
+      <br>
+      <h2> Comments<h/2>
       ${ !this.isEditing ?   this.comments.map(comment =>{
         return html`
-        <h4>${comment.message}</h4>
-        <h5>${comment.username}</h5>
-        <h6>${comment.createdDate}</h6>
-        <h6>${comment.updatedDate}</h6>
+        <h4> Message: ${comment.message}</h4>
+        <h5> Username: ${comment.username}</h5>
+        <h6> Created on ${new Date(comment.createdDate).toDateString()}</h6>
+        <h6> Last update it on ${new Date(comment.updatedDate).toDateString()}</h6>
 
-        <button @click="${this.editComment}"> Edit </button> 
-        <button @click=> Delete </button> 
+        <button-component @submit-comment="${this.editComment}" .comment="${comment}"   text= "Edit"> </button-component> 
+        <button-component @submit-comment="${this.deleteComment}" .comment="${comment}" text= "Delete"></button-component> 
 
         ${this.isEditingComment && (this.isEditingCommentId === comment.id) ?  html`
         <comment-component @submit-comment="${this.updateComment}" .comment="${comment}"></comment-component>
@@ -62,7 +68,7 @@ export function template () {
 
 
       <comment-component @submit-comment="${this.createComment}"   .comment = "${this.blog}" ></comment-component>
-      <button> Comment </button> 
+   
     
     `: ''}
    

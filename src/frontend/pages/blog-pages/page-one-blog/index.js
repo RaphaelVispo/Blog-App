@@ -79,10 +79,11 @@ class Page extends LitPage {
     });
     try {
       if (response.status !== 200) {
+        this.isEditing=false;
         return this.setErrorMessage(await response.json(), response.status);
       } else {
         this.blog = await response.json();
-        changeUrl('/blog')
+       
       }
     } catch (error) {
       return this.setErrorMessage(error, 404);
@@ -115,7 +116,7 @@ class Page extends LitPage {
   async updateComment (event) {
     event.preventDefault();
 
-  
+    console.log(event);
     // we get the data from the detail being sent by the todo-component
     const { detail } = event;
     const response = await window.fetch(`/api/blog/${this.blog.id}/comment/${detail.id}`, {
@@ -127,6 +128,7 @@ class Page extends LitPage {
     });
     try {
       if (response.status !== 200) {
+        this.isEditingComment=false;
         return this.setErrorMessage(await response.json(), response.status);
       } else {
         const comm = await response.json();
@@ -168,28 +170,30 @@ class Page extends LitPage {
     }
   }
 
-  // async deleteComment (event) {
-  //   event.preventDefault();
-  //   // we get the data from the detail being sent by the todo-component
-  //   const { detail } = event;
-  //   const response = await window.fetch(`/api/blog/${this.blog.id}`, {
-  //     method: 'DELETE',
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify(detail)
-  //   });
-  //   try {
-  //     if (response.status !== 200) {
-  //       return this.setErrorMessage(await response.json(), response.status);
-  //     } else {
-  //       this.blog = await response.json();
-  //       changeUrl('/blog')
-  //     }
-  //   } catch (error) {
-  //     return this.setErrorMessage(error, 404);
-  //   }
-  // }
+  async deleteComment (event) {
+    event.preventDefault();
+    console.log(event);
+
+    // we get the data from the detail being sent by the todo-component
+    const { detail } = event;
+    const response = await window.fetch(`/api/blog/${this.blog.id}/comment/${detail.id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({id: detail.id})
+    });
+    try {
+      if (response.status !== 200) {
+        return this.setErrorMessage(await response.json(), response.status);
+      } else {
+        console.log(this.comments.filter((obj) => obj.id !== detail.id ));
+        this.comments = this.comments.filter((obj) => obj.id !== detail.id )
+      }
+    } catch (error) {
+      return this.setErrorMessage(error, 404);
+    }
+  }
 
 
 

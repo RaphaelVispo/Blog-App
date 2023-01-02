@@ -22,18 +22,10 @@ export function template () {
         margin-left: 10px;
       }
     </style>
-    <form class="todo-create-form" @submit="${this.submitComment}">
-      <div class="label-input-group">
-        <label for="message">
-          Message:
-        </label>
-        <input type="text" placeholder="Message" id="message" name="message" value="${this.comment?.message}">
-      </div>
-
-
       <div class="flex-group">
-        <button>
-          Comment
+      
+        <button @click = "${this.submitComment}">
+          ${this.text}
         </button>
       </div>
     </form>
