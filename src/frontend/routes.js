@@ -20,7 +20,7 @@ export const routes = {
       <page-home></page-home>
     `,
     // lazy-loads the page when the URL pattern is visited
-    preRender: () => import('./pages/page-home/index.js')
+    preRender: () => import('./pages/user-pages/page-home/index.js')
   },
   '/login': {
     render: () => html`
@@ -29,7 +29,7 @@ export const routes = {
     // runs all scripts, if any one of the functions in the list fails
     preRender: [
       redirectIfLoggedIn,
-      () => import('./pages/page-login/index.js')
+      () => import('./pages/user-pages/page-login/index.js')
     ]
   },
   '/register': {
@@ -39,7 +39,7 @@ export const routes = {
     // runs all scripts, if any one of the functions in the list fails
     preRender: [
       redirectIfLoggedIn,
-      () => import('./pages/page-register/index.js')
+      () => import('./pages/user-pages/page-register/index.js')
     ]
   },
   '/change-password': {
@@ -49,7 +49,7 @@ export const routes = {
     // runs all scripts, if any one of the functions in the list fails
     preRender: [
       redirectIfLoggedIn,
-      () => import('./pages/page-change-password/index.js')
+      () => import('./pages/user-pages/page-change-password/index.js')
     ]
   },
   '/change-user-data': {
@@ -59,7 +59,7 @@ export const routes = {
     // runs all scripts, if any one of the functions in the list fails
     preRender: [
       redirectIfLoggedIn,
-      () => import('./pages/page-change-user-data/index.js')
+      () => import('./pages/user-pages/page-change-user-data/index.js')
     ]
   },
   '/user': {
@@ -69,7 +69,7 @@ export const routes = {
     // runs all scripts, if any one of the functions in the list fails
     preRender: [
       redirectIfLoggedOut,
-      () => import('./pages/page-user/index.js')
+      () => import('./pages/user-pages/page-user/index.js')
     ]
   },
 //   '/todos': {
@@ -99,7 +99,7 @@ export const routes = {
     // runs all scripts, if any one of the functions in the list fails
     preRender: [
       redirectIfLoggedOut,
-      () => import('./pages/page-logout/index.js')
+      () => import('./pages/user-pages/page-logout/index.js')
     ]
   }
 };
