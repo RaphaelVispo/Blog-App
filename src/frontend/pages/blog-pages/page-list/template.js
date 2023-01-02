@@ -27,7 +27,7 @@ export function template () {
     <div class="todo-list">
       ${this.blogs.map(blog => html`
         <div class="todo">
-          <a href="/todos/${blog.id}">
+          <a href="/blog/${blog.id}">
             <div> ${blog.title}</div>
             <div> ${new Date(blog.createdDate).toDateString()}</div>
           </a>

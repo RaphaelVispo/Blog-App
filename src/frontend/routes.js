@@ -83,6 +83,16 @@ export const routes = {
       () => import('./pages/blog-pages/page-list/index.js')
     ]
   },
+  '/blog/:id': {
+    render: () => html`
+      <page-todo-one .paramObject=${router.paramObject}></page-todo-one>
+    `,
+    // runs all scripts, if any one of the functions in the list fails
+    preRender: [
+      redirectIfLoggedOut,
+      () => import('./pages/blog-pages/page-one-blog/index.js')
+    ]
+  },
 //   '/todos': {
 //     render: () => html`
 //       <page-todos></page-todos>
