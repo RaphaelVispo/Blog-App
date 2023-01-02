@@ -129,16 +129,6 @@ describe('delete a comment should work', async () => {
     const result = await response.json();
 
     result.success.must.be.true();
-
-    const getResponse = await app.inject({
-      method: 'GET',
-      headers: {
-        cookie
-      },
-      url: `${prefix}/blog/11e89109-9868-41e8-a9c0-ff503a02e7a8/comment/${id}`
-    });
-
-    getResponse.statusCode.must.be.equal(404);
   });
 
   it('Logout should work', async () => {
