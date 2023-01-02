@@ -15,6 +15,9 @@ class Page extends LitPage {
   @property({ type: Boolean })
   isEditing= false;
 
+  @property({ type: Boolean })
+  isEditingComment= false;
+
   @property({ type: String })
   errorMessage = ''
   render () {
@@ -32,6 +35,10 @@ class Page extends LitPage {
 
   async editBlog(event){
     this.isEditing= true;
+  }
+
+  async editComment(event){
+    this.isEditingComment= true;
   }
   async getBlog (id) {
     const response = await window.fetch(`/api/blog/${id}`);
@@ -94,6 +101,57 @@ class Page extends LitPage {
       return this.setErrorMessage(error, 404);
     }
   }
+
+  async updateComment (event) {
+    event.preventDefault();
+
+    console.log(event);
+    // we get the data from the detail being sent by the todo-component
+    const { detail } = event;
+    const response = await window.fetch(`/api/blog/${this.blog.id}/comment/${detail.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(detail)
+    });
+    try {
+      if (response.status !== 200) {
+        return this.setErrorMessage(await response.json(), response.status);
+      } else {
+        this.blog = await response.json();
+        changeUrl('/blog')
+      }
+    } catch (error) {
+      return this.setErrorMessage(error, 404);
+    }
+  }
+
+  async deleteComment (event) {
+    event.preventDefault();
+    // we get the data from the detail being sent by the todo-component
+    const { detail } = event;
+    const response = await window.fetch(`/api/blog/${this.blog.id}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(detail)
+    });
+    try {
+      if (response.status !== 200) {
+        return this.setErrorMessage(await response.json(), response.status);
+      } else {
+        this.blog = await response.json();
+        changeUrl('/blog')
+      }
+    } catch (error) {
+      return this.setErrorMessage(error, 404);
+    }
+  }
+
+
+
   async setErrorMessage (data, status) {
     const { message, error } = data;
     this.errorMessage = `HTTP Code: ${status} - ${error} - ${message}`;
