@@ -112,16 +112,6 @@ export const schemas = {
     properties: {
       message: {
         type: 'string'
-      },
-      username: {
-        type: 'string'
-      },
-      createdDate: {
-        type: 'number'
-      },
-      updatedDate: {
-        type: 'number'
-
       }
 
     },

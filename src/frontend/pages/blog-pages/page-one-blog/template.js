@@ -1,5 +1,6 @@
 import { html } from 'lit';
 import '../../../components/blog-components/blog-component/index.js';
+import '../../../components/comment-components/comment-component/index.js';
 
 
 export function template () {
@@ -42,15 +43,25 @@ export function template () {
       }
       
     
-      ${ !this.isEditing ?   this.blog.comments.map(comment =>{
+      ${ !this.isEditing ?   this.comments.map(comment =>{
         return html`
         <h4>${comment.message}</h4>
         <h5>${comment.username}</h5>
         <h6>${comment.createdDate}</h6>
         <h6>${comment.updatedDate}</h6>
+
+        <button @click="${this.editComment}"> Edit </button> 
+        <button @click=> Delete </button> 
+
+        ${this.isEditingComment ?  html`
+        <comment-component @submit-comment="${this.updateComment}" .comment="${comment}"></comment-component>
+       `
+         :''}
         `
       }): ''}
 
+
+      <comment-component @submit-comment="${this.createComment}"   .comment = "${this.blog}" ></comment-component>
       <button> Comment </button> 
     
     `: ''}

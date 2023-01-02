@@ -12,6 +12,11 @@ class Page extends LitPage {
   @property({ type: Object })
   blog = {}
 
+  @property({ type: Array })
+  comments = []
+
+
+
   @property({ type: Boolean })
   isEditing= false;
 
@@ -50,6 +55,7 @@ class Page extends LitPage {
         return this.setErrorMessage(await response.json(), response.status);
       } else {
         this.blog = await response.json();
+        this.comments = this.blog.comments
         console.log(this.blog);
       }
     } catch (error) {
@@ -105,7 +111,7 @@ class Page extends LitPage {
   async updateComment (event) {
     event.preventDefault();
 
-    console.log(event);
+  
     // we get the data from the detail being sent by the todo-component
     const { detail } = event;
     const response = await window.fetch(`/api/blog/${this.blog.id}/comment/${detail.id}`, {
@@ -113,7 +119,7 @@ class Page extends LitPage {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(detail)
+      body: JSON.stringify({message: detail.message})
     });
     try {
       if (response.status !== 200) {
@@ -127,28 +133,54 @@ class Page extends LitPage {
     }
   }
 
-  async deleteComment (event) {
+  async createComment (event) {
     event.preventDefault();
+    console.log(event);
     // we get the data from the detail being sent by the todo-component
     const { detail } = event;
-    const response = await window.fetch(`/api/blog/${this.blog.id}`, {
-      method: 'DELETE',
+
+    const response = await window.fetch(`/api/blog/${detail.id}/comment`, {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(detail)
+      body: JSON.stringify({message: detail.message})
     });
     try {
-      if (response.status !== 200) {
-        return this.setErrorMessage(await response.json(), response.status);
-      } else {
-        this.blog = await response.json();
-        changeUrl('/blog')
-      }
+      const data = await response.json();
+      // appends the new object
+      this.comments = [
+        data,
+        ...this.comments
+      ];
+      console.log(this.comments)
     } catch (error) {
       return this.setErrorMessage(error, 404);
     }
   }
+
+  // async deleteComment (event) {
+  //   event.preventDefault();
+  //   // we get the data from the detail being sent by the todo-component
+  //   const { detail } = event;
+  //   const response = await window.fetch(`/api/blog/${this.blog.id}`, {
+  //     method: 'DELETE',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     },
+  //     body: JSON.stringify(detail)
+  //   });
+  //   try {
+  //     if (response.status !== 200) {
+  //       return this.setErrorMessage(await response.json(), response.status);
+  //     } else {
+  //       this.blog = await response.json();
+  //       changeUrl('/blog')
+  //     }
+  //   } catch (error) {
+  //     return this.setErrorMessage(error, 404);
+  //   }
+  // }
 
 
 
