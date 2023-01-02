@@ -1,5 +1,5 @@
 import { html } from 'lit';
-// import '../../components/todo-component/index.js';
+import '../../../components/blog-components/blog-component/index.js';
 
 export function template () {
   return html`
@@ -39,6 +39,8 @@ export function template () {
         </div>
       `)}
     </div>
+
+    <blog-component @submit-blog="${this.createBlog}"></blog-component>
    
   `;
 }

@@ -29,28 +29,28 @@ class Page extends LitPage {
       return this.setErrorMessage(error, 404);
     }
   }
-//   async createTodo (event) {
-//     event.preventDefault();
-//     // we get the data from the detail being sent by the todo-component
-//     const { detail } = event;
-//     const response = await window.fetch('/api/todo', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify(detail)
-//     });
-//     try {
-//       const data = await response.json();
-//       // appends the new object
-//       this.todos = [
-//         data,
-//         ...this.todos
-//       ];
-//     } catch (error) {
-//       return this.setErrorMessage(error, 404);
-//     }
-//   }
+  async createBlog (event) {
+    event.preventDefault();
+    // we get the data from the detail being sent by the todo-component
+    const { detail } = event;
+    const response = await window.fetch('/api/blog', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(detail)
+    });
+    try {
+      const data = await response.json();
+      // appends the new object
+      this.blogs = [
+        data,
+        ...this.blogs
+      ];
+    } catch (error) {
+      return this.setErrorMessage(error, 404);
+    }
+  }
 
   async setErrorMessage (data, status) {
     const { message, error } = data;
