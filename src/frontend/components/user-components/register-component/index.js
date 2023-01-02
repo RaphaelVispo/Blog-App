@@ -11,9 +11,11 @@ import { template } from './template.js';
 class Component extends LitNoShadow {
   @property({ type: String })
   errorMessage = ''
+
   render () {
     return template.bind(this)();
   }
+
   // this is called when submit button is clicked (see template.js)
   async register (event) {
     // this prevents the page from using the default behavior
@@ -21,12 +23,12 @@ class Component extends LitNoShadow {
     event.preventDefault();
     // gets the event.target and change the variable name to form
     const { target: form } = event;
-    console.log(form)
+    console.log(form);
     const username = form.username.value;
     const password = form.password.value;
     const firstName = form.firstName.value;
     const lastName = form.lastName.value;
-    
+
     // calls an API call
     const response = await window.fetch('/api/register', {
       method: 'POST',
@@ -44,7 +46,6 @@ class Component extends LitNoShadow {
       this.errorMessage = '';
       await state.set('user-is-logged-in', true);
       return changeUrl('/blog');
-
     }
     const { message, error } = await response.json();
     this.errorMessage = `HTTP Code: ${response.status} - ${error} - ${message}`;

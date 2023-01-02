@@ -1,6 +1,5 @@
 import { html } from 'lit';
 
-
 export function template () {
   return html`
     <style>
@@ -24,7 +23,7 @@ export function template () {
           ${this.errorMessage}
         </div>
       `
-      
+
       : ''}
 
     <div class="label-input-group">
@@ -42,7 +41,7 @@ export function template () {
     </div>
 
     ${Object.keys(this.userData).length
-        ? html `
+        ? html`
         <h4> User Name : ${this.userData.username}</h4>
         <h4> First Name : ${this.userData.firstName}</h4>
         <h4> Last Name : ${this.userData.lastName}</h4>
@@ -51,7 +50,6 @@ export function template () {
 
         `
         : ''
-        
 
     }
     

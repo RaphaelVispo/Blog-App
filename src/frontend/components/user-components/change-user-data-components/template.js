@@ -31,7 +31,7 @@ export function template () {
           ${this.errorMessage}
         </div>
       `
-      
+
       : ''}
 
     <div class="label-input-group">

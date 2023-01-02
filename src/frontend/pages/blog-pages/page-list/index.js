@@ -13,9 +13,11 @@ class Page extends LitPage {
 
   @property({ type: String })
   errorMessage = ''
+
   render () {
     return template.bind(this)();
   }
+
   async connectedCallback () {
     super.connectedCallback();
     const response = await window.fetch('/api/blog');
@@ -29,6 +31,7 @@ class Page extends LitPage {
       return this.setErrorMessage(error, 404);
     }
   }
+
   async createBlog (event) {
     event.preventDefault();
     // we get the data from the detail being sent by the todo-component

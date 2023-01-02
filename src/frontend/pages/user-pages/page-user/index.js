@@ -9,8 +9,7 @@ import { template } from './template.js';
  */
 @customElement('page-users')
 class Page extends LitPage {
-
-  @property({type: Object}) 
+  @property({ type: Object })
   userData = {};
 
   @property({ type: String })
@@ -20,7 +19,7 @@ class Page extends LitPage {
     return template.bind(this)();
   }
 
-  async getUserData(event){
+  async getUserData (event) {
     event.preventDefault();
     // gets the event.target and change the variable name to form
     const { target: form } = event;
@@ -30,22 +29,17 @@ class Page extends LitPage {
 
     const response = await window.fetch(`/api/user/${userId}`);
 
-    //console.log(await response.json());
+    // console.log(await response.json());
 
-    
     if (response.status === 200) {
-        this.errorMessage = '';
-        this.userData = await response.json();
-
-    }else {
-    const { message, error } = await response.json();
-    this.errorMessage = `HTTP Code: ${response.status} - ${error} - ${message}`;
-    await state.set('user-is-logged-in', false);
+      this.errorMessage = '';
+      this.userData = await response.json();
+    } else {
+      const { message, error } = await response.json();
+      this.errorMessage = `HTTP Code: ${response.status} - ${error} - ${message}`;
+      await state.set('user-is-logged-in', false);
     }
-
   }
-
-
 }
 
 export { Page };

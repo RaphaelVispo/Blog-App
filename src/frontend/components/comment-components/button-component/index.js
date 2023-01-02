@@ -13,8 +13,6 @@ class Page extends LitNoShadow {
   @property({ type: String })
   text = ''
 
-
-
   render () {
     return template.bind(this)();
   }
@@ -23,7 +21,7 @@ class Page extends LitNoShadow {
     event.preventDefault();
 
     const detail = {
-      id : this.comment.id
+      id: this.comment.id
 
     };
 

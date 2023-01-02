@@ -1,5 +1,5 @@
 import { customElement, property } from 'lit/decorators.js';
-import { state } from '../../../worker/index.js';
+
 import { changeUrl } from '../../../utils/helpers/change-url.js';
 import { LitPage } from '../../../utils/lit-page/index.js';
 import { template } from './template.js';
@@ -22,13 +22,15 @@ class Page extends LitPage {
   isEditingComment= false;
 
   @property({ type: String })
-  isEditingCommentId= "";
+  isEditingCommentId= '';
 
   @property({ type: String })
   errorMessage = ''
+
   render () {
     return template.bind(this)();
   }
+
   async updated (changedMap) {
     await super.updated(changedMap);
     if (changedMap.has('paramObject')) {
@@ -39,16 +41,17 @@ class Page extends LitPage {
     }
   }
 
-  async editBlog(event){
-    this.isEditing= true;
+  async editBlog (event) {
+    this.isEditing = true;
   }
 
-  async editComment(event){
+  async editComment (event) {
     event.preventDefault();
-    this.isEditingComment= true;
+    this.isEditingComment = true;
     console.log(event);
-    this.isEditingCommentId= event.detail.id;
+    this.isEditingCommentId = event.detail.id;
   }
+
   async getBlog (id) {
     const response = await window.fetch(`/api/blog/${id}`);
     if (response.status !== 200) {
@@ -59,13 +62,14 @@ class Page extends LitPage {
         return this.setErrorMessage(await response.json(), response.status);
       } else {
         this.blog = await response.json();
-        this.comments = this.blog.comments
+        this.comments = this.blog.comments;
         console.log(this.blog);
       }
     } catch (error) {
       return this.setErrorMessage(error, 404);
     }
   }
+
   async updateBlog (event) {
     event.preventDefault();
     // we get the data from the detail being sent by the todo-component
@@ -79,11 +83,10 @@ class Page extends LitPage {
     });
     try {
       if (response.status !== 200) {
-        this.isEditing=false;
+        this.isEditing = false;
         return this.setErrorMessage(await response.json(), response.status);
       } else {
         this.blog = await response.json();
-       
       }
     } catch (error) {
       return this.setErrorMessage(error, 404);
@@ -106,7 +109,7 @@ class Page extends LitPage {
         return this.setErrorMessage(await response.json(), response.status);
       } else {
         this.blog = await response.json();
-        changeUrl('/blog')
+        changeUrl('/blog');
       }
     } catch (error) {
       return this.setErrorMessage(error, 404);
@@ -124,20 +127,19 @@ class Page extends LitPage {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({message: detail.message})
+      body: JSON.stringify({ message: detail.message })
     });
     try {
       if (response.status !== 200) {
-        this.isEditingComment=false;
+        this.isEditingComment = false;
         return this.setErrorMessage(await response.json(), response.status);
       } else {
         const comm = await response.json();
         // console.log(comm)
         // console.log(this.comments)
-        this.comments = this.comments.map(obj => comm.id === obj.id ? comm : obj) ;
+        this.comments = this.comments.map(obj => comm.id === obj.id ? comm : obj);
         // console.log(this.comments)
         this.isEditingComment = false;
-        
       }
     } catch (error) {
       return this.setErrorMessage(error, 404);
@@ -155,7 +157,7 @@ class Page extends LitPage {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({message: detail.message})
+      body: JSON.stringify({ message: detail.message })
     });
     try {
       const data = await response.json();
@@ -164,7 +166,7 @@ class Page extends LitPage {
         ...this.comments,
         data
       ];
-      console.log(this.comments)
+      console.log(this.comments);
     } catch (error) {
       return this.setErrorMessage(error, 404);
     }
@@ -181,26 +183,23 @@ class Page extends LitPage {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({id: detail.id})
+      body: JSON.stringify({ id: detail.id })
     });
     try {
       if (response.status !== 200) {
         return this.setErrorMessage(await response.json(), response.status);
       } else {
-        console.log(this.comments.filter((obj) => obj.id !== detail.id ));
-        this.comments = this.comments.filter((obj) => obj.id !== detail.id )
+        console.log(this.comments.filter((obj) => obj.id !== detail.id));
+        this.comments = this.comments.filter((obj) => obj.id !== detail.id);
       }
     } catch (error) {
       return this.setErrorMessage(error, 404);
     }
   }
 
-
-
   async setErrorMessage (data, status) {
     const { message, error } = data;
     this.errorMessage = `HTTP Code: ${status} - ${error} - ${message}`;
-   
   }
 }
 

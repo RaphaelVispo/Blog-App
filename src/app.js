@@ -68,6 +68,5 @@ export async function build () {
   fastify.register(swagger, swaggerOptions);
   fastify.register(openAPIGlue, openAPIGlueOptions);
 
-
   return fastify;
 }

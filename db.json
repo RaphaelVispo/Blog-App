@@ -28,12 +28,117 @@
       "createdDate": 1672385123967,
       "updatedDate": 1672385123967
     },
-    "koto@example.com": {
-      "hashedPassword": "$2b$10$2c.btQsBm37WgwWQ8GcT8uYqV3paFhM88qxSG.CfQEvqFgdfe0wIa",
-      "firstName": "Warren",
-      "lastName": "Barber",
-      "createdDate": 1672385126096,
-      "updatedDate": 1672385126096
+    "string": {
+      "hashedPassword": "$2b$10$adO85usr1oI..Pc1b43ID.IsMgwNf/X11ugr8C39gF72oSt2vacba",
+      "firstName": "string",
+      "lastName": "string",
+      "createdDate": 1672577323613,
+      "updatedDate": 1672577323613
+    },
+    "user3": {
+      "hashedPassword": "$2b$10$68Uh45txkwqowQ3kWwrKu.SsXxVo01oy/09uEIw/gntFk46jugSHC",
+      "firstName": "user3user3",
+      "lastName": "user3user3",
+      "createdDate": 1672578560082,
+      "updatedDate": 1672586590718
+    },
+    "da@example.com": {
+      "hashedPassword": "$2b$10$VP.H.jW6GqGn8tp9NSaSNe7YsRmEr68y0CigLaGsnoAXWn5rKkpdu",
+      "firstName": "Larry",
+      "lastName": "Sottili",
+      "createdDate": 1672667120885,
+      "updatedDate": 1672667120885
+    },
+    "co@example.com": {
+      "hashedPassword": "$2b$10$9dwfNoas9T2K4VDHIxGIleqDJOgcINI8xNMFr.mWBjr6uP8FEqXcy",
+      "firstName": "Clarence",
+      "lastName": "de Vos",
+      "createdDate": 1672667123180,
+      "updatedDate": 1672667123180
+    },
+    "ivo@example.com": {
+      "hashedPassword": "$2b$10$gue/2PpjIsD7BKU5Hn3QKOVLpL7z7JYGVOgtYsF4XSX2wM47ru6Di",
+      "firstName": "Isabelle",
+      "lastName": "Spencer",
+      "createdDate": 1672667125585,
+      "updatedDate": 1672667125585
+    },
+    "bo@example.com": {
+      "hashedPassword": "$2b$10$vfWyCEK0WL6FgylH4on3oOyz//S.dX5iI2CVSZT464qFO11E2If72",
+      "firstName": "Erik",
+      "lastName": "Ciolli",
+      "createdDate": 1672667127764,
+      "updatedDate": 1672667127764
+    },
+    "ka@example.com": {
+      "hashedPassword": "$2b$10$nq582N.5PWJqOEdumtn9Nu7KeoxfaZAdbwipt6loB/9hEbZ78pbU.",
+      "firstName": "Mattie",
+      "lastName": "Pieralli",
+      "createdDate": 1672667129803,
+      "updatedDate": 1672667129803
+    },
+    "ode@example.com": {
+      "hashedPassword": "$2b$10$tXVvxJIi/te3FtPMTT4Nv.r3Vh1y9ueCTocdhriPfVnXxkpc/aqmK",
+      "firstName": "Paul",
+      "lastName": "Giannotti",
+      "createdDate": 1672667131985,
+      "updatedDate": 1672667131985
+    },
+    "vico@example.com": {
+      "hashedPassword": "$2b$10$KL1xpzlWr891y/wePxJYTefwmzNSC1BVB3GB83jCTQpb3JYbS5oOO",
+      "firstName": "Harold",
+      "lastName": "Zhang",
+      "createdDate": 1672667134980,
+      "updatedDate": 1672667134980
+    },
+    "wetog@example.com": {
+      "hashedPassword": "$2b$10$St3hcUANFQsesFpF7ZD6tO/CJnri5/JnshtC6i.00fNjn6UMjgpYK",
+      "firstName": "Polly",
+      "lastName": "Gentile",
+      "createdDate": 1672667137402,
+      "updatedDate": 1672667137402
+    },
+    "bosuzop@example.com": {
+      "hashedPassword": "$2b$10$NpNjaB2LW9RhrOXsXF7LxuHqELXchWKVdGq5mmOKL0e7IMg.JTVVS",
+      "firstName": "Jayden",
+      "lastName": "Dondoli",
+      "createdDate": 1672667169861,
+      "updatedDate": 1672667169861
+    },
+    "suz@example.com": {
+      "hashedPassword": "$2b$10$hAinDtSOB25nTbiJcIkih.VhjWOzpDv0VKYbRFePOfpuzaWoL9rqm",
+      "firstName": "Harold",
+      "lastName": "Lord",
+      "createdDate": 1672667171993,
+      "updatedDate": 1672667171993
+    },
+    "zobno@example.com": {
+      "hashedPassword": "$2b$10$KWpzI5kmWDBHrnUIimOdZeS8jkGAgqVpkJXPAGZgy1LOh3E2qJt42",
+      "firstName": "Matilda",
+      "lastName": "Paul",
+      "createdDate": 1672667174097,
+      "updatedDate": 1672667174097
+    },
+    "firzigif@example.com": {
+      "hashedPassword": "$2b$10$waQRblBmcoxjGzdKlEW2XuLvq2c8a7sTRgqVpgxLNSyaOSNPgH4ya",
+      "firstName": "Eric",
+      "lastName": "Sims",
+      "createdDate": 1672667176282,
+      "updatedDate": 1672667176282
+    },
+    "liz@example.com": {
+      "hashedPassword": "$2b$10$/lPEYse8h7NX13uA/FAHrOOn2RI4TwVtZBOF6tOac/5L6wCG/2/KS",
+      "firstName": "Edit firstname",
+      "lastName": "edit lastname",
+      "createdDate": 1672667178594,
+      "updatedDate": 1672667178684
+    },
+    "inpi@example.com": {
+      "hashedPassword": "$2b$10$/faAzieyGSi/3FGOpk1FSuQ9S08UzYchXA0UJXukAfZ7Ib8voMQei",
+      "firstName": "Jim",
+      "lastName": "Nardoni",
+      "createdDate": 1672667180943,
+      "updatedDate": 1672667180943
     }
   },
   "blogs": {
@@ -89,6 +194,18 @@
           "username": "ofanakid@example.com",
           "createdDate": 1672385132517,
           "updatedDate": 1672385132517
+        },
+        "5c73078b-31dc-46f9-83fe-424e609746cd": {
+          "message": "New comments",
+          "username": "ode@example.com",
+          "createdDate": 1672667132077,
+          "updatedDate": 1672667132077
+        },
+        "ddec4aeb-31ff-42dd-b15e-e2295e5f1b4e": {
+          "message": "Edited comment",
+          "username": "wetog@example.com",
+          "createdDate": 1672667137480,
+          "updatedDate": 1672667137483
         }
       },
       "createdDate": 1672210680122,
@@ -130,6 +247,54 @@
       "comments": {},
       "createdDate": 1672385121992,
       "updatedDate": 1672385121992
+    },
+    "32d3cf6b-65b3-47f8-a986-6c332e545d85": {
+      "title": "frontend",
+      "description": "it working! edit aswell!",
+      "username": "user3",
+      "comments": {},
+      "createdDate": 1672631215484,
+      "updatedDate": 1672644343056
+    },
+    "233c5f76-d612-43b2-9eb8-4a4031a3bd2d": {
+      "title": "New Todo",
+      "description": "Some description",
+      "username": "da@example.com",
+      "comments": {},
+      "createdDate": 1672667121038,
+      "updatedDate": 1672667121038
+    },
+    "469fb26e-0ee8-4f83-8b91-7e245841c0a3": {
+      "title": "New Todo for get",
+      "description": "Some description",
+      "username": "co@example.com",
+      "comments": {},
+      "createdDate": 1672667123290,
+      "updatedDate": 1672667123290
+    },
+    "e245b1c8-155a-4976-a3b2-e11769344cdd": {
+      "title": "New Todo for get",
+      "description": "Some description",
+      "username": "ivo@example.com",
+      "comments": {},
+      "createdDate": 1672667125686,
+      "updatedDate": 1672667125686
+    },
+    "b400bbf0-e70c-4869-9203-6d711d34f868": {
+      "title": "New Todo for update",
+      "description": "Some description 2",
+      "username": "ka@example.com",
+      "comments": {},
+      "createdDate": 1672667129891,
+      "updatedDate": 1672667129893
+    },
+    "ce5c34d0-ee96-4717-a5b4-836ecad35b10": {
+      "title": "New Todo for update 2",
+      "description": "Some description",
+      "username": "ka@example.com",
+      "comments": {},
+      "createdDate": 1672667129895,
+      "updatedDate": 1672667129897
     }
   }
 }

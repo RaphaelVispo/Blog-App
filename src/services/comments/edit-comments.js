@@ -3,7 +3,7 @@ import { getData, saveData } from '../../utils/db/index.js';
 export const updateComment = async (request, reply) => {
   const { params, body, username } = request;
   const { blogId: blogid, commentId } = params;
-  const { id, message } = body;
+  const { message } = body;
 
   // check if there is username (meaning logged in)
   if (!username) {
@@ -22,7 +22,7 @@ export const updateComment = async (request, reply) => {
   await saveData(db);
 
   return {
-    id : commentId,
+    id: commentId,
     ...db.blogs[blogid].comments[commentId]
   };
 };

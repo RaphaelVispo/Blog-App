@@ -10,7 +10,6 @@ export async function redirectIfLoggedIn () {
     // go to todos;
     await state.set('user-is-logged-in', true);
     return changeUrl('/blog');
-
   }
 
   await state.set('user-is-logged-in', false);

@@ -93,26 +93,26 @@ export const routes = {
       () => import('./pages/blog-pages/page-one-blog/index.js')
     ]
   },
-//   '/todos': {
-//     render: () => html`
-//       <page-todos></page-todos>
-//     `,
-//     // runs all scripts, if any one of the functions in the list fails
-//     preRender: [
-//       redirectIfLoggedOut,
-//       () => import('./pages/page-todos/index.js')
-//     ]
-//   },
-//   '/todos/:id': {
-//     render: () => html`
-//       <page-todo-one .paramObject=${router.paramObject}></page-todo-one>
-//     `,
-//     // runs all scripts, if any one of the functions in the list fails
-//     preRender: [
-//       redirectIfLoggedOut,
-//       () => import('./pages/page-todo-one/index.js')
-//     ]
-//   },
+  //   '/todos': {
+  //     render: () => html`
+  //       <page-todos></page-todos>
+  //     `,
+  //     // runs all scripts, if any one of the functions in the list fails
+  //     preRender: [
+  //       redirectIfLoggedOut,
+  //       () => import('./pages/page-todos/index.js')
+  //     ]
+  //   },
+  //   '/todos/:id': {
+  //     render: () => html`
+  //       <page-todo-one .paramObject=${router.paramObject}></page-todo-one>
+  //     `,
+  //     // runs all scripts, if any one of the functions in the list fails
+  //     preRender: [
+  //       redirectIfLoggedOut,
+  //       () => import('./pages/page-todo-one/index.js')
+  //     ]
+  //   },
   '/logout': {
     render: () => html`
       <page-logout></page-logout>

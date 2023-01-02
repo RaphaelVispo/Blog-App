@@ -10,8 +10,6 @@ class Page extends LitNoShadow {
   @property({ type: Object })
   comment = null
 
-
-
   render () {
     return template.bind(this)();
   }
@@ -22,8 +20,8 @@ class Page extends LitNoShadow {
     const { target: form } = event;
 
     const detail = {
-      id : this.comment.id,
-      message: form.message.value,
+      id: this.comment.id,
+      message: form.message.value
 
     };
 
