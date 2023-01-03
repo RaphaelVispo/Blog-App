@@ -13,7 +13,7 @@ export const updateComment = async (request, reply) => {
   const db = await getData();
 
   if (db.blogs[blogid].comments[commentId].username !== username) {
-    return reply.forbidden('You are not the owner of the todo');
+    return reply.forbidden('You are not the owner of the comment');
   }
 
   db.blogs[blogid].comments[commentId].message = message || db.blogs[blogid].comments[commentId].message;

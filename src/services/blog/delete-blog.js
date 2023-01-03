@@ -11,7 +11,7 @@ export const deleteBlog = async (request, reply) => {
   }
 
   if (db.blogs[id].username !== username) {
-    return reply.forbidden('You are not the owner of the todo');
+    return reply.forbidden('You are not the owner of the blog');
   }
 
   delete db.blogs[id];

@@ -3,6 +3,7 @@ import { state } from '../../../worker/index.js';
 
 import { LitPage } from '../../../utils/lit-page/index.js';
 import { template } from './template.js';
+import { changeUrl } from '../../../utils/helpers/change-url.js';
 
 /**
  * @type {LitPage}
@@ -34,12 +35,11 @@ class Page extends LitPage {
     if (response.status === 200) {
       this.errorMessage = '';
       this.userData = await response.json();
+      
     } else {
       const { message, error } = await response.json();
       this.errorMessage = `HTTP Code: ${response.status} - ${error} - ${message}`;
-      setTimeout(() => {
-        this.errorMessage = '';
-      }, 2000);
+
       await state.set('user-is-logged-in', false);
     }
   }

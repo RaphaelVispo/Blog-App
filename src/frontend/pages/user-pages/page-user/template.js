@@ -13,7 +13,7 @@ export function template () {
       }
     </style>
     <h2>
-      Todos
+      Look at Users
     </h2>
     <form @submit=${this.getUserData}>
     ${this.errorMessage

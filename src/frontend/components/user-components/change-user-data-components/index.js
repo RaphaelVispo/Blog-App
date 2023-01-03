@@ -42,12 +42,15 @@ class Component extends LitNoShadow {
     if (response.status === 200) {
       this.errorMessage = '';
    
+    }else {
+      const { message, error } = await response.json();
+      this.errorMessage = `HTTP Code: ${response.status} - ${error} - ${message}`;
+      setTimeout(() => {
+        this.errorMessage = '';
+      }, 2000);
+
     }
-    const { message, error } = await response.json();
-    this.errorMessage = `HTTP Code: ${response.status} - ${error} - ${message}`;
-    setTimeout(() => {
-      this.errorMessage = '';
-    }, 2000);
+
   }
 }
 
