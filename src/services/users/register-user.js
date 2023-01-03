@@ -28,6 +28,12 @@ export const registerUser = async (request, reply) => {
 
   await saveData(db);
 
+  const token = await reply.jwtSign({
+    username
+  });
+
+  request.session.set('token', token);
+
   return {
     username,
     ...user
