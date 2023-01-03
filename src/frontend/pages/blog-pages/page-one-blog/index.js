@@ -7,7 +7,7 @@ import { template } from './template.js';
 /**
  * @type {LitPage}
  */
-@customElement('page-todo-one')
+@customElement('page-blog-one')
 class Page extends LitPage {
   @property({ type: Object })
   blog = {}
@@ -148,6 +148,7 @@ class Page extends LitPage {
 
   async createComment (event) {
     event.preventDefault();
+    console.log(this.comments);
     console.log(event);
     // we get the data from the detail being sent by the todo-component
     const { detail } = event;
@@ -163,9 +164,11 @@ class Page extends LitPage {
       const data = await response.json();
       // appends the new object
       this.comments = [
-        ...this.comments,
-        data
-      ];
+        data,
+        ...this.comments
+      ]
+
+
       console.log(this.comments);
     } catch (error) {
       return this.setErrorMessage(error, 404);
@@ -200,6 +203,9 @@ class Page extends LitPage {
   async setErrorMessage (data, status) {
     const { message, error } = data;
     this.errorMessage = `HTTP Code: ${status} - ${error} - ${message}`;
+    setTimeout(() => {
+      this.errorMessage = '';
+    }, 2000);
   }
 }
 

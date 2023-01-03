@@ -41,6 +41,9 @@ class Component extends LitNoShadow {
     }
     const { message, error } = await response.json();
     this.errorMessage = `HTTP Code: ${response.status} - ${error} - ${message}`;
+    setTimeout(() => {
+      this.errorMessage = '';
+    }, 2000);
   }
 }
 

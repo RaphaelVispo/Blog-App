@@ -59,6 +59,9 @@ class Page extends LitPage {
     const { message, error } = data;
     this.errorMessage = `HTTP Code: ${status} - ${error} - ${message}`;
     await state.set('user-is-logged-in', false);
+    setTimeout(() => {
+      this.errorMessage = '';
+    }, 2000);
   }
 }
 

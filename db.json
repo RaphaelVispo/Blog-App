@@ -48,6 +48,104 @@
       "lastName": "Sottili",
       "createdDate": 1672667120885,
       "updatedDate": 1672667120885
+    },
+    "cem@example.com": {
+      "hashedPassword": "$2b$10$6UynqHNz2getLV1im2iqKeasvnr.nxlzIqvcxcrIEHKMT0deT9yQu",
+      "firstName": "Chad",
+      "lastName": "Busch",
+      "createdDate": 1672668084072,
+      "updatedDate": 1672668084072
+    },
+    "wodpe@example.com": {
+      "hashedPassword": "$2b$10$khSZvcmJ5Kgm/AJ3cW7kseI6vgG/RrHgUBMWrBa3aObVRXDbsCTkm",
+      "firstName": "Francisco",
+      "lastName": "Fox",
+      "createdDate": 1672668086059,
+      "updatedDate": 1672668086059
+    },
+    "vopmi@example.com": {
+      "hashedPassword": "$2b$10$YOHJ6lBTfhY4M0QoKWzlDO/DDpfcsNZ8oiODcyTsNxEHqIpIIH4hm",
+      "firstName": "Earl",
+      "lastName": "Bianchi",
+      "createdDate": 1672668088080,
+      "updatedDate": 1672668088080
+    },
+    "mietlo@example.com": {
+      "hashedPassword": "$2b$10$4Z.6jGFzzmjidlAStt2EBOqXtUiOEKJLTRDxXfKGXKCnxIxKBUMhG",
+      "firstName": "Johnny",
+      "lastName": "Bond",
+      "createdDate": 1672668090091,
+      "updatedDate": 1672668090091
+    },
+    "osupomna@example.com": {
+      "hashedPassword": "$2b$10$s0XmBehERRPl7JbGlG1f7uJ4cAuHNGBT5sDo38qk1FyaGup1btcHK",
+      "firstName": "Harriet",
+      "lastName": "Philippe",
+      "createdDate": 1672668091988,
+      "updatedDate": 1672668091988
+    },
+    "akab@example.com": {
+      "hashedPassword": "$2b$10$LIRCJ9/UOgnD9x9k7UxrPe9TfOf8JLEBv.sB3cIsZd7EFh84N4gq2",
+      "firstName": "Allie",
+      "lastName": "Galardi",
+      "createdDate": 1672668094067,
+      "updatedDate": 1672668094067
+    },
+    "jikon@example.com": {
+      "hashedPassword": "$2b$10$FnImyvuqutiPTGquIY6RYuSHOE51ZqcVZqpeEHyDPObV5Sfwv2X5.",
+      "firstName": "Erik",
+      "lastName": "Cordier",
+      "createdDate": 1672668095967,
+      "updatedDate": 1672668095967
+    },
+    "posutodu@example.com": {
+      "hashedPassword": "$2b$10$5.BzHhAiE9o8Uvl.VIRcSOBA3H9SgOmV0137C/OUxWX87fyDhs55q",
+      "firstName": "Leonard",
+      "lastName": "Galanti",
+      "createdDate": 1672668098381,
+      "updatedDate": 1672668098381
+    },
+    "miw@example.com": {
+      "hashedPassword": "$2b$10$1296cyhBmxipGzWSrp4/nODimWWDHe7Fvjeeb/CNPpsWchaAmzxbS",
+      "firstName": "Verna",
+      "lastName": "Nannini",
+      "createdDate": 1672668130660,
+      "updatedDate": 1672668130660
+    },
+    "abgak@example.com": {
+      "hashedPassword": "$2b$10$oCJTs.LrjGZxRCPrYaCD6.TNvUgd1.AwXggi6N8BUgT5RwCzVzg2e",
+      "firstName": "Ruth",
+      "lastName": "Larson",
+      "createdDate": 1672668132783,
+      "updatedDate": 1672668132783
+    },
+    "cij@example.com": {
+      "hashedPassword": "$2b$10$IQcVk/pEVvQRQoPG8g1KO.2S.Uoj1ZmL83IeR44gggcto5IE.PgFa",
+      "firstName": "Maude",
+      "lastName": "Pieraccini",
+      "createdDate": 1672668134884,
+      "updatedDate": 1672668134884
+    },
+    "po@example.com": {
+      "hashedPassword": "$2b$10$ff/Fu66.LECay6W4cyNcTuEGUHgnEb0xgR2RnzZz/1BN8RzdwBVXq",
+      "firstName": "Hester",
+      "lastName": "Tozzi",
+      "createdDate": 1672668137075,
+      "updatedDate": 1672668137075
+    },
+    "ibuini@example.com": {
+      "hashedPassword": "$2b$10$hs4b5HekQBEUlaNSUkJXqu7A1QIfZ1FC5hfQRs6fYOcZCpUZwubd6",
+      "firstName": "Edit firstname",
+      "lastName": "edit lastname",
+      "createdDate": 1672668139316,
+      "updatedDate": 1672668139399
+    },
+    "dij@example.com": {
+      "hashedPassword": "$2b$10$sQKEAJ8qNy0D8yKHlltZJOC94AnW00PTOArLqP77rsiEvPaBh2jru",
+      "firstName": "Mabel",
+      "lastName": "Borghini",
+      "createdDate": 1672668141676,
+      "updatedDate": 1672668141676
     }
   },
   "blogs": {
@@ -97,6 +195,18 @@
           "username": "fobiw@example.com",
           "createdDate": 1672300842899,
           "updatedDate": 1672300842902
+        },
+        "4a9ab20f-24ec-4ec5-a332-c7dda1787421": {
+          "message": "New comments",
+          "username": "akab@example.com",
+          "createdDate": 1672668094152,
+          "updatedDate": 1672668094152
+        },
+        "b1ceb4ba-86bd-45ba-93d3-7fbdc8606181": {
+          "message": "Edited comment",
+          "username": "posutodu@example.com",
+          "createdDate": 1672668098468,
+          "updatedDate": 1672668098470
         }
       },
       "createdDate": 1672210680122,
@@ -146,6 +256,61 @@
       "comments": {},
       "createdDate": 1672631215484,
       "updatedDate": 1672644343056
+    },
+    "19645d97-1ef8-438e-998f-69dace22a36e": {
+      "title": "New Todo",
+      "description": "Some description",
+      "username": "cem@example.com",
+      "comments": {},
+      "createdDate": 1672668084174,
+      "updatedDate": 1672668084174
+    },
+    "d94ba7d6-672a-458f-9802-27e5e64196b5": {
+      "title": "New Todo for get",
+      "description": "Some description",
+      "username": "wodpe@example.com",
+      "comments": {},
+      "createdDate": 1672668086140,
+      "updatedDate": 1672668086140
+    },
+    "22bbeb02-e2c5-4605-b7c2-519156b6dcc3": {
+      "title": "New Todo for get",
+      "description": "Some description",
+      "username": "vopmi@example.com",
+      "comments": {},
+      "createdDate": 1672668088196,
+      "updatedDate": 1672668088196
+    },
+    "c5a8a0f9-782d-4402-b2c6-1b65f0d68b16": {
+      "title": "New Todo for update",
+      "description": "Some description 2",
+      "username": "osupomna@example.com",
+      "comments": {},
+      "createdDate": 1672668092067,
+      "updatedDate": 1672668092070
+    },
+    "a3c5ed59-e99f-476f-ac28-966fb57cbf91": {
+      "title": "New Todo for update 2",
+      "description": "Some description",
+      "username": "osupomna@example.com",
+      "comments": {},
+      "createdDate": 1672668092073,
+      "updatedDate": 1672668092074
+    },
+    "a855c618-ee4d-4909-b230-629a3c597577": {
+      "title": "new",
+      "description": "blog",
+      "username": "user3",
+      "comments": {
+        "fd9ad584-af61-43f9-a2ec-720eb3c476bf": {
+          "message": "This is a new comment",
+          "username": "user3",
+          "createdDate": 1672742470912,
+          "updatedDate": 1672742470912
+        }
+      },
+      "createdDate": 1672741157306,
+      "updatedDate": 1672741157306
     }
   }
 }

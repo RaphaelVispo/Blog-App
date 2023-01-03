@@ -33,7 +33,7 @@ export function template () {
 
       <div class="flex-group">
         <button>
-          Comment
+        ${this.text}
         </button>
       </div>
     </form>

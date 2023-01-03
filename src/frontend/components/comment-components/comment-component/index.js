@@ -10,6 +10,9 @@ class Page extends LitNoShadow {
   @property({ type: Object })
   comment = null
 
+  @property({ type: String })
+  text = ''
+
   render () {
     return template.bind(this)();
   }
