@@ -17,7 +17,8 @@ export function template () {
       `
       : ''}
 
-      ${Object.keys(this.blog).length ? html`
+      ${Object.keys(this.blog).length
+? html`
       <h2>Title: ${this.blog.title}</h2>
       <h3>Description: ${this.blog.description}</h3>
       <h3>Username: ${this.blog.username}</h3>
@@ -37,7 +38,8 @@ export function template () {
       
       <br>
       <h2> Comments<h/2>
-      ${!this.isEditing? this.comments.map(comment => {
+      ${!this.isEditing
+? this.comments.map(comment => {
         return html`
         <h4> Message: ${comment.message}</h4>
         <h5> Username: ${comment.username}</h5>

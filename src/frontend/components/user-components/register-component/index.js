@@ -52,10 +52,8 @@ class Component extends LitNoShadow {
     setTimeout(() => {
       this.errorMessage = '';
     }, 2000);
-    
+
     await state.set('user-is-logged-in', false);
-
-
   }
 }
 

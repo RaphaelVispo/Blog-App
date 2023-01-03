@@ -166,8 +166,7 @@ class Page extends LitPage {
       this.comments = [
         data,
         ...this.comments
-      ]
-
+      ];
 
       console.log(this.comments);
     } catch (error) {

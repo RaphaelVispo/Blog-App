@@ -265,6 +265,13 @@
       "lastName": "userduserd",
       "createdDate": 1672748839778,
       "updatedDate": 1672748890128
+    },
+    "userA1": {
+      "hashedPassword": "$2b$10$ooW.E28sz8iCcqBDNwExu.JLrihXxGgfgAkphx/5kceANPRUQCx5G",
+      "firstName": "userA1userA1",
+      "lastName": "userA1userA1",
+      "createdDate": 1672749435875,
+      "updatedDate": 1672749481392
     }
   },
   "blogs": {
@@ -438,6 +445,21 @@
       "comments": {},
       "createdDate": 1672748913879,
       "updatedDate": 1672748924208
+    },
+    "e8412da4-ae84-4a35-a7c4-f0690128ca61": {
+      "title": "Add one blog",
+      "description": "it working! edit aswell!",
+      "username": "userA1",
+      "comments": {
+        "359e6cae-6c4e-459e-bce8-f87e5106cfcf": {
+          "message": "New comment edit",
+          "username": "userA1",
+          "createdDate": 1672749557138,
+          "updatedDate": 1672749565147
+        }
+      },
+      "createdDate": 1672749524811,
+      "updatedDate": 1672749539732
     }
   }
 }
